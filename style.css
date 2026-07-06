@@ -1,0 +1,41 @@
+:root {
+    --primary:#1DB954;
+    --secondary:#14823B;
+    --text:#FFFFFF;
+    --accent:#FFD700;
+    --bg:#0B4F30;
+    --defaultcolor: #A6F1C0;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: medium;
+    font-style: normal;
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    color: var(--accent);
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: medium;
+    font-style: normal;
+    color: var(--accent);
+}
+
+p, ul {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: medium;
+    font-style: normal;
+    color: var(--text);
+}
+
+
+body { background-color: var(--bg); }
+
+/* span { color: var(--accent); } */
+
+button {
+    background-color: var(--primary);
+    color: var(--text);
+}
