@@ -1,3 +1,4 @@
+// For the animation upon opening
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector('nav');
 
@@ -9,4 +10,12 @@ window.addEventListener('scroll', () => {
     }
     
     lastScrollY = window.scrollY;
+});
+
+// For card flip animation
+const cardContainer = document.querySelector('.card-container');
+const cardInner = document.querySelector('.card');
+
+cardContainer.addEventListener('click', () => {
+    cardInner.classList.toggle('is-flipped');
 });
