@@ -1,25 +1,15 @@
 :root {
-    --primary:#1DB954;
-    --secondary:#14823B;
-    --text:#FFFFFF;
-    --accent:#FFD700;
-    --bg:#0B4F30;
-    --defaultcolor: #A6F1C0;
-}
-
-h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: medium;
-    font-style: normal;
-    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
-    color: var(--accent);
+    --background: #FBFBFE;
+    --text: #001F3D;
+    --elements: #003566;
+    --accent: #FFC300;
 }
 
 h2 {
     font-family: "Poppins", sans-serif;
     font-weight: medium;
     font-style: normal;
-    color: var(--accent);
+    color: var(--text);
 }
 
 p, ul {
@@ -28,14 +18,176 @@ p, ul {
     font-weight: medium;
     font-style: normal;
     color: var(--text);
+    font-size: clamp(18px, 3vw, 26px);
 }
 
 
-body { background-color: var(--bg); }
+body { 
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
 
-/* span { color: var(--accent); } */
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #003566;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
 
-button {
-    background-color: var(--primary);
+nav.nav-hidden {
+    top: -100px;
+}
+
+nav a {
+    font-family: "Poppins", sans-serif;
+    font-weight: medium;
+    font-style: normal;
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Blinking text cursor animation */
+#blink {
+    animation: blink-sharp 1s step-end infinite;
+}
+
+@keyframes blink-sharp {
+    50% { visibility: hidden; }
+}
+
+/* === TITLE SECTION == */
+
+#title {
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    overflow: hidden;
+    text-align: center; 
+}
+
+#title h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: medium;
+    font-size: clamp(2rem, 4vw + 1rem, 6.5rem);
+    text-shadow: 3px 3px 0px var(--accent);
     color: var(--text);
+    
+    margin: 0;
+    padding: 10px;
+    line-height: 1.1; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+}
+
+#title h1 div {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+#title p {
+    margin: 0; 
+    padding: 0;
+    display: block; 
+}
+
+#title .subtitle {
+    margin-top: 30px; 
+    font-size: clamp(1.1rem, 1.5vw + 0.5rem, 1.75rem);
+}
+
+#title .subtitle.small {
+    margin-top: 30px; 
+    font-size: clamp(0.85rem, 0.8vw + 0.5rem, 1.1rem);
+}
+
+.rotate { 
+    display: inline-block;
+}
+.deg1 { transform: rotate(2.9deg); }
+
+.deg2 { transform: rotate(-4.7deg); }
+
+#show-first {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    white-space: nowrap;
+    
+    animation: fadeOutAfter 3s ease-in-out forwards;
+}
+
+/* arrow animation MAKE SURE TO DISABLE VIA COMMENTING WHEN DEVELOPING OTHER AREAS! */
+
+#show-first {
+    opacity: 0;
+}
+
+.show-second, .arrow {
+    opacity: 0;
+}
+
+@keyframes fadeOutAfter {
+    0% { opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInStay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#show-first {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    white-space: nowrap;
+    
+    animation: fadeOutAfter 3s ease-in-out forwards;
+}
+
+.show-second, .arrow { 
+    animation: fadeInStay 1s ease-in-out 3s forwards; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    animation: allowScroll 3s forwards;
+}
+
+@keyframes allowScroll {
+    0% { 
+        overflow-y: hidden; 
+    }
+    99% { 
+        overflow-y: hidden; 
+    }
+    100% { 
+        overflow-y: auto;
+    }
 }
