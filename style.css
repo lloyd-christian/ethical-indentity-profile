@@ -3,8 +3,11 @@
     --text: #001F3D;
     --elements: #003566;
     --accent: #FFC300;
-    --heading2-size: clamp(1.5rem, 2.5vw + 1rem, 4rem);
-    --text-size: clamp(18px, 3vw, 26px)
+    --heading2-size: clamp(2rem, 3.5vw + 1rem, 4rem);
+    --text-size: clamp(1.125rem, 0.5vw + 1rem, 1.625rem);
+    --inline-padding: clamp(1rem, 4vw, 5rem);
+    --max-content-width: 1200px;
+    interpolate-size: allow-keywords;
 }
 
 h2 {
@@ -22,7 +25,7 @@ p, ul {
     font-weight: medium;
     font-style: normal;
     color: var(--text);
-    font-size: clamp(18px, 3vw, 26px);
+    font-size: var(--text-size);
 }
 
 
@@ -32,21 +35,21 @@ body {
     padding: 0;
 }
 
-/* Navigation Bar */
-/* nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+.layout-container {
     width: 100%;
-    z-index: 1000;
-    transition: top 0.3s ease-in-out;
-    margin: 0;
-    padding: 0.5rem;
-    background-color: #003566;
-    color: white;
-    display: flex;
-    justify-content: start;
-} */
+    max-width: var(--max-content-width);
+    margin-inline: auto;
+    padding-inline: var(--inline-padding);
+}
+
+/* Ensuring each section consumes the entire viewport */
+.full-section {
+    height: 100vh; 
+    width: 100%;
+    padding-inline: var(--inline-padding);
+}
+
+/* Navigation Bar */
 
 nav {
     position: fixed;
@@ -54,7 +57,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 40px; 
+    padding: var(--inline-padding);
     background: linear-gradient(to top,rgba(0, 53, 102, 0) 0%,
     rgba(0, 53, 102, 0.1) 25%,
     rgba(0, 53, 102, 0.35) 55%,
@@ -80,11 +83,7 @@ nav a {
     padding: 0.5rem, 0.5rem, 0.5rem, 1.5rem;
 }
 
-/* Ensuring each section consumes the entire viewport */
-.full-section {
-    height: 100vh; 
-    width: 100%;
-}
+
 
 /* === TITLE SECTION == */
 
@@ -333,4 +332,25 @@ html, body {
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+/* SECTION 3: MORAL COMPASS */
+details {
+    font-family: Inter;
+    font-size: var(--text-size);
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+}
+
+details::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 0.3s ease, content-visibility 0.3s ease allow-discrete;
+}
+
+details[open]::details-content {
+    height: auto;
 }
