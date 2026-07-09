@@ -20,35 +20,71 @@ cardContainer.addEventListener('click', () => {
     cardInner.classList.toggle('is-flipped');
 });
 
-// For Experience and Ethical Dillema
-const sections = document.querySelectorAll('#that-one-experience, #ethical-dilemma');
+// For moral compass
+const items = document.querySelectorAll('.item');
 
-sections.forEach((section) => {
-    const track = section.querySelector('.slides-track');
-    const slides = section.querySelectorAll('.slide');
-    const prevBtn = section.querySelector('.prevBtn');
-    const nextBtn = section.querySelector('.nextBtn');
+items.forEach(item => {
+    let timerId = null;
+
+    item.addEventListener('click', () => {
+        const originalText = item.textContent;
+        const alternateText = item.getAttribute('data-text');
+
+        if (item.classList.contains('revealed')) return;
+
+        item.textContent = alternateText;
+        item.setAttribute('data-text', originalText);
+        item.classList.add('revealed');
+
+        clearTimeout(timerId);
+
+        timerId = setTimeout(() => {
+        const currentText = item.textContent;
+        const originalSavedText = item.getAttribute('data-text');
+
+        item.textContent = originalSavedText;
+        item.setAttribute('data-text', currentText);
+        item.classList.remove('revealed');
+        }, 5000); 
+    });
+});
+
+
+
+// For Experience and Ethical Dillema
+document.querySelectorAll('.slider-card').forEach(card => {
+    const slides = card.querySelectorAll('.slide');
+    const steps = card.querySelectorAll('.progress-step');
+    const nextBtn = card.querySelector('.nextBtn');
+    const prevBtn = card.querySelector('.prevBtn');
+    
     let currentIndex = 0;
 
-    if (!track || slides.length === 0 || !prevBtn || !nextBtn) return;
+    function updateSlides(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
 
-    function moveSlide(index) {
-        if (index >= slides.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = slides.length - 1;
-        } else {
-            currentIndex = index;
-        }
-        
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        steps.forEach((step, i) => {
+            if (i === index) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
     }
 
     nextBtn.addEventListener('click', () => {
-        moveSlide(currentIndex + 1);
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlides(currentIndex);
     });
 
     prevBtn.addEventListener('click', () => {
-        moveSlide(currentIndex - 1);
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlides(currentIndex);
     });
 });
