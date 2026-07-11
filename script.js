@@ -1,14 +1,18 @@
-// For navbar
-let lastScrollY = window.scrollY;
 const navbar = document.querySelector('.navbar');
+const stickyPanels = document.querySelectorAll('.sticky-panel');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-    navbar.classList.add('hidden');
+    if (navbar.classList.contains('hidden')) {
+        stickyPanels.forEach(panel => {
+            panel.style.top = '0px';
+            panel.style.height = '100vh';
+        });
     } else {
-    navbar.classList.remove('hidden');
+        stickyPanels.forEach(panel => {
+            panel.style.top = '70px';
+            panel.style.height = 'calc(100vh - 70px)';
+        });
     }
-    lastScrollY = window.scrollY;
 });
 
 function toggleMenu() {
@@ -61,42 +65,35 @@ items.forEach(item => {
     });
 });
 
-
-
 // For Experience and Ethical Dillema
-document.querySelectorAll('.slider-card').forEach(card => {
-    const slides = card.querySelectorAll('.slide');
-    const steps = card.querySelectorAll('.progress-step');
-    const nextBtn = card.querySelector('.nextBtn');
-    const prevBtn = card.querySelector('.prevBtn');
-    
-    let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollSections = document.querySelectorAll(".scroll-story-section");
 
-    function updateSlides(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
-        });
+    scrollSections.forEach((section) => {
+        const steps = section.querySelectorAll(".progress-step");
+        const blocks = section.querySelectorAll(".story-block");
 
-        steps.forEach((step, i) => {
-            if (i === index) {
-                step.classList.add('active');
-            } else {
-                step.classList.remove('active');
-            }
-        });
-    }
+        const observerOptions = {
+            root: null,
+            rootMargin: "-30% 0px -40% 0px",
+            threshold: 0.1
+        };
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlides(currentIndex);
-    });
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const stepIndex = entry.target.getAttribute("data-step");
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlides(currentIndex);
+                    steps.forEach((step) => step.classList.remove("active"));
+
+                    if (steps[stepIndex]) {
+                        steps[stepIndex].classList.add("active");
+                    }
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        blocks.forEach((block) => observer.observe(block));
     });
 });
