@@ -1,23 +1,35 @@
-// For the animation upon opening
+// For navbar
 let lastScrollY = window.scrollY;
-const navbar = document.querySelector('nav');
+const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > lastScrollY) {
-        navbar.classList.add('nav-hidden');
+    navbar.classList.add('hidden');
     } else {
-        navbar.classList.remove('nav-hidden');
+    navbar.classList.remove('hidden');
     }
-    
     lastScrollY = window.scrollY;
 });
 
-// For card flip animation
-const cardContainer = document.querySelector('.card-container');
-const cardInner = document.querySelector('.card');
+function toggleMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuLinks = document.getElementById('menuLinks');
+    
+    menuToggle.classList.toggle('active');
+    menuLinks.classList.toggle('active');
+    
+    if (menuLinks.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
 
-cardContainer.addEventListener('click', () => {
-    cardInner.classList.toggle('is-flipped');
+// For card flip animation
+const card = document.querySelector('.card');
+
+card.addEventListener('click', () => {
+    card.classList.toggle('is-flipped');
 });
 
 // For moral compass

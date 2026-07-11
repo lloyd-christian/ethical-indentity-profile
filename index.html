@@ -5,50 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GE8 - Ethical Identity Profile</title>
-    <link rel="stylesheet" href="new-style.css">
+    <link rel="stylesheet" href="style-3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="nav">
-        <nav>
-            <a href="#" class="nav-name">Lloyd Christian</a>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lloyd Christian</div>
+
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="menu-links" id="menuLinks">
+                <a href="#" onclick="toggleMenu()">Who am I?</a>
+                <a href="#" onclick="toggleMenu()">My Moral Compass</a>
+                <a href="#" onclick="toggleMenu()">The Experience</a>
+                <a href="#" onclick="toggleMenu()">Ethical Decision</a>
+                <a href="#" onclick="toggleMenu()">For me, Ethics is...</a>
+                <a href="#" onclick="toggleMenu()">At the end of the Ethics course...</a>
+                <a href="#" onclick="toggleMenu()">The Motto</a>
+            </div>
         </nav>
     </header>
-
     <main>
-        <section id="section-title">
-            <!-- <p id="show-first">Lloyd Christian presents...</p> -->
-            <div class="full-section title-container">
-                    <h1 class="show-second header-title">
+        <section id="section-title" class="section-wrapper">
+            <div class="content-container centered-title">
+                <h1 class="title-header">
                     <div>My Ethical</div>
                     <div>Identity Profile</div>
-                    </h1>
+                </h1>
 
-                <p class="subtitle show-second">MY CREATIVE FORMAT FOR GE8 - ETHICS</p>
-                <p class="subtitle small show-second">SCROLL TO BEGIN</p>
+                <p class="title-subheader">My creative format for GE8 Ethics</p>
+                <p class="title-subheader">Who am I as a moral person? Scroll to begin</p>
 
                 <div class="arrow">
-                    <span>[insert arrow here :)]</span>
+                    <span></span>
                 </div>
             </div>
-            
+
         </section>
 
-        <section id="who-am-i">
-            <div class="card-container">
+        <section id="who-am-i" class="section-wrapper">
+            <div class="content-container">
                 <div class="card">
                     <div class="card-front">
                         <div>
                             <h2>WHO AM I?</h2>
                         </div>
                         <div class="card-front-image">
-                            <!--image-->
                         </div>
                         <div>
                             <p>Click or Tap the card to flip...</p>
@@ -69,159 +80,232 @@
             </div>
         </section>
 
-        <section id="moral-compass">
-            <h2>MORAL COMPASS</h2>
-            <p>Here are my 5 moral values that guide my life decisions:</p>
 
-            <div class="moral-container">
-                <div class="grid-cell">
-                    <button class="item"
-                        data-text="Realistic allows me to properly weigh in the positive and negative outcomes of my decisions.">Realistic</button>
-                </div>
-                <div class="grid-cell">
-                    <button class="item"
-                        data-text="Empathy allows me to weigh in the possible impact of my decisions to others.">Empathy</button>
-                </div>
-                <div class="grid-cell">
-                    <button class="item" data-text="Autonomy ensures that my personal (not group decision) decision is purely thought by me and it was not influenced by others.">Autonomy</button>
-                </div>
-                <div class="grid-cell">
-                    <button class="item"
-                        data-text="Honesty allows me to know which decisions is the right thing to do.">Honesty</button>
-                </div>
-                <div class="grid-cell">
-                    <button class="item" data-text="Authenticity allows me to made decision that aligned with my true self and my values.">Authenticity</button>
-                </div>
-            </div>
-        </section>
+        <section id="moral-compass" class="section-wrapper">
+            <div class="content-container">
+                <h2>My Moral Compass</h2>
+                <p>Here are my 5 values guiding my decisions. Click each button to know how they influence my decisions.
+                </p>
 
-        <section id="that-one-experience">
-            <div class="slider-card">
-                <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
-        
-                <div class="the-progress">
-                    <p class="progress-step active">PROBLEM.</p>
-                    <p class="progress-step">SOLUTION.</p>
-                    <p class="progress-step">LESSON.</p>
-                </div>
-        
-                <div class="slides-container">
-                    <div class="slides-track">
-                        <div class="slide active">
-                            <p><span>THE PROBLEM. </span>Back then, there are some people that always tested my
-                            peace and autonomy. It reached to the point that whenever I saw them, I felt
-                            stressed and terrified. However, I kept saying "yes" or go with them because I don't
-                            want to lose them.</p>
-                        </div>
-                        <div class="slide">
-                            <p><span>THE SOLUTION. </span>hen, when I decided to say "No" frequently and stay away
-                            from them as much as I can, I felt freedom.</p>
-                        </div>
-                        <div class="slide">
-                            <p><span>THE LESSON. </span>Then, I realized that <strong>I need to set boundaries with
-                            other people</strong> because that's the way to attain peace and autonomy. Now,
-                            it influenced me that if someone has become an arch nemesis to my peace, then I'll
-                            assert my boundaries and get away as much as I can.</strong></p>
-                        </div>
+                <div class="values-container">
+                    <div class="grid-cell">
+                        <button class="item"
+                            data-text="Realistic allows me to properly weigh in the positive and negative outcomes of my decisions.">Realistic</button>
+                    </div>
+                    <div class="grid-cell">
+                        <button class="item"
+                            data-text="Empathy allows me to weigh in the possible impact of my decisions to others.">Empathy</button>
+                    </div>
+                    <div class="grid-cell">
+                        <button class="item"
+                            data-text="Autonomy ensures that my personal (not group decision) decision is purely thought by me and it was not influenced by others.">Autonomy</button>
+                    </div>
+                    <div class="grid-cell">
+                        <button class="item"
+                            data-text="Honesty allows me to know which decisions is the right thing to do.">Honesty</button>
+                    </div>
+                    <div class="grid-cell">
+                        <button class="item"
+                            data-text="Authenticity allows me to made decision that aligned with my true self and my values.">Authenticity</button>
                     </div>
                 </div>
-        
-                <div class="controls">
-                    <button class="prevBtn">Back</button>
-                    <button class="nextBtn">Next</button>
-                </div>
             </div>
         </section>
-        
-        <section id="ethical-dilemma">
-            <div class="slider-card">
-                <h2 class="slider-title">ETHICAL DILEMMA</h2>
-        
-                <div class="the-progress">
-                    <p class="progress-step active">PROBLEM.</p>
-                    <p class="progress-step">SOLUTION.</p>
-                    <p class="progress-step">LESSON.</p>
-                </div>
-        
-                <div class="slides-container">
-                    <div class="slides-track">
-                        <div class="slide active">
-                            <p><span>THE PROBLEM: </span>You are developing software for a client. While working on the
-                            project, you find a copyrighted source code online that
-                            perfectly
-                            solves the problem. The client will never know if you copy and use it without
-                            permission. What would you do?</p>
-                        </div>
-                        <div class="slide">
-                            <p><span>THE SOLUTION: </span>If I see a copyrighted source code that is useful for my
-                            project, the first thing to check is their
-                            licensing agreement,
-                            specifically, an Open Source License like MIT, BSD 2-Clause, or Apache License 2.0.
-                            These licenses
-                            allow
-                            usage and
-                            modification of their code with the need only of crediting them in the LICENSE or NOTICE
-                            file.</p>
-                        </div>
-                        <div class="slide">
-                            <p><span>THE VALUE: </span>The value that guides me through this decision is integrity to honor, accountability to
-                            have
-                            responsibility, and respect
-                            to these people who worked hard to make those source code. This decision reflects a kind of IT professional where crediting is important when you
-                            use your code
-                            as
-                            they worked
-                            tirelessly to make that happen.</p>
+
+        <section id="experience" class="section-wrapper">
+            <div class="content-container">
+                <div class="card-container slider-card">
+
+                    <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
+
+                    <div class="the-progress">
+                        <p class="progress-step active">PROBLEM.</p>
+                        <p class="progress-step">SOLUTION.</p>
+                        <p class="progress-step">LESSON.</p>
+                    </div>
+
+                    <div class="slides-container">
+                        <div class="slides-track">
+                            <div class="slide active">
+                                <p><span>THE PROBLEM. </span>Back then, there are some people that always tested my
+                                    peace and
+                                    autonomy. It reached to the point that whenever I saw them, I felt stressed and
+                                    terrified.
+                                    However, I kept saying "yes" or go with them because I don't want to lose them.</p>
+                            </div>
+                            <div class="slide">
+                                <p><span>THE SOLUTION. </span>Then, when I decided to say "No" frequently and stay away
+                                    from
+                                    them as much as I can, I felt freedom.</p>
+                            </div>
+                            <div class="slide">
+                                <p><span>THE LESSON. </span>Then, I realized that <strong>I need to set boundaries with
+                                        other
+                                        people</strong> because that's the way to attain peace and autonomy. Now, it
+                                    influenced
+                                    me that if someone has become an arch nemesis to my peace, then I'll assert my
+                                    boundaries
+                                    and get away as much as I can.</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="controls">
+                        <button class="prevBtn">Back</button>
+                        <button class="nextBtn">Next</button>
+                    </div>
+
                 </div>
-        
-                <div class="controls">
-                    <button class="prevBtn">Back</button>
-                    <button class="nextBtn">Next</button>
+
+            </div>
+        </section>
+
+        <section id="ethical-dilemma" class="section-wrapper">
+
+            <div class="content-container">
+                <div class="card-container slider-card">
+                    <h2 class="slider-title">ETHICAL DILEMMA</h2>
+
+                    <div class="the-progress">
+                        <p class="progress-step active">PROBLEM.</p>
+                        <p class="progress-step">SOLUTION.</p>
+                        <p class="progress-step">LESSON.</p>
+                    </div>
+
+                    <div class="slides-container">
+                        <div class="slides-track">
+                            <div class="slide active">
+                                <p><span>THE PROBLEM: </span>You are developing software for a client. While working on
+                                    the
+                                    project, you find a copyrighted source code online that
+                                    perfectly
+                                    solves the problem. The client will never know if you copy and use it without
+                                    permission. What would you do?</p>
+                            </div>
+                            <div class="slide">
+                                <p><span>THE SOLUTION: </span>If I see a copyrighted source code that is useful for my
+                                    project, the first thing to check is their
+                                    licensing agreement,
+                                    specifically, an Open Source License like MIT, BSD 2-Clause, or Apache License 2.0.
+                                    These licenses
+                                    allow
+                                    usage and
+                                    modification of their code with the need only of crediting them in the LICENSE or
+                                    NOTICE
+                                    file.</p>
+                            </div>
+                            <div class="slide">
+                                <p><span>THE VALUE: </span>The value that guides me through this decision is integrity
+                                    to honor, accountability to
+                                    have
+                                    responsibility, and respect
+                                    to these people who worked hard to make those source code. This decision reflects a
+                                    kind of IT professional where crediting is important when you
+                                    use your code
+                                    as
+                                    they worked
+                                    tirelessly to make that happen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="prevBtn">Back</button>
+                        <button class="nextBtn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-wrapper split-section">
+            <div class="content-container">
+
+                <div class="split-layout">
+                    <div class="container-one">
+                        <h2>FOR ME, ETHICS IS...</h2>
+                    </div>
+
+                    <div class="container-two">
+                        <div></div>
+                        <p>a guide that leads myself into the morally right one and avoids the morally wrong one. Think
+                            of it as
+                            a parent, who always reminds and reprimands you. Ethics done this by reminding you that
+                            every action
+                            you do is either right or wrong, and if you do wrong actions, consequences follow like a
+                            parent
+                            reprimanded their children.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="end-of-course" class="section-wrapper split-section">
+            <div class="content-container">
+                <div class="split-layout">
+                    <div class="container-one">
+                        <h2>AT THE END OF ETHICS COURSE,</h2>
+                    </div>
+                    <div class="container-two">
+                        <p>I hope to become someone who has accountability and integrity for every action and decision,
+                            empathy to
+                            other people, a
+                            genuine respect for myself and others, has an autonomy for every personal decision and avoid
+                            being
+                            dragged by other
+                            people’s choices, being assertive to my boundaries, and of course, being able to recognize
+                            and reflect
+                            which action is
+                            correct and wrong. With all of the aforementioned things, I’ll be able to become an ethical
+                            person</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="show-second layout-container">
-            <h2>FOR ME, ETHICS IS...</h2>
-            <p>a guide that leads myself into the morally right one and avoids the morally wrong one. Think of it as a
-                parent, who
-                always reminds and reprimands you. Ethics done this by reminding you that every action you do is either
-                right or wrong,
-                and if you do wrong actions, consequences follow like a parent reprimanded their children.</p>
+        <section class="section-wrapper">
+            <div class="content-container">
+                <div class="card-container quote-card">
+                    <blockquote cite="https://www.trvst.world/mind-body/boundaries-quotes/">
+                        <p class="quote-text">"Each time you set a healthy boundary, you say 'yes' to more freedom."</p>
+                        <p class="quote-author">— Nancy Levin, <cite>Life Coach</cite></p>
+                    </blockquote>
+                </div>
+            </div>
         </section>
 
-        <section class="show-second layout-container">
-            <h2>AT THE END OF ETHICS COURSE,</h2>
-            <p>I hope to become someone who has accountability and integrity for every action and decision, empathy to
-                other people, a
-                genuine respect for myself and others, has an autonomy for every personal decision and avoid being
-                dragged by other
-                people’s choices, being assertive to my boundaries, and of course, being able to recognize and reflect
-                which action is
-                correct and wrong. With all of the aforementioned things, I’ll be able to become an ethical person.</p>
-        </section>
+<section id="conclusion" class="section-wrapper footer-grid-section">
+    <div class="mondrian-border-wrapper">
+        <div class="mondrian-container">
+            <div class="mondrian-block text-block fill-orange mobile-center line-right line-bottom">And now</div>
+            <div class="mondrian-block fill-yellow line-right line-bottom hide-mobile"></div>
+            <div class="mondrian-block fill-dark line-right line-bottom hide-mobile"></div>
+            <div class="mondrian-block fill-light line-bottom hide-mobile"></div>
 
-        <section class="show-second layout-container">
-            <blockquote cite=" https://www.trvst.world/mind-body/boundaries-quotes/">
-                <p>"Each time you set a healthy boundary, you say 'yes' to more freedom."</p>
-                <p>— Nancy Levin, <cite>Life Coach</cite></p>
-            </blockquote>
-        </section>
+            <div class="mondrian-block fill-orange line-right line-bottom hide-mobile"></div>
+            <div class="mondrian-block fill-light line-right line-bottom hide-mobile"></div>
+            <div class="mondrian-block text-block fill-dark text-white mobile-center line-right line-bottom">you know
+            </div>
+            <div class="mondrian-block fill-yellow line-bottom hide-mobile"></div>
 
-        <section class="show-second layout-container">
-            <p>And now you know my ethical self.</p>
-            <button type="button">Scroll to Top</button>
-            <button type="button">Infographic Version</button>
-        </section>
+            <div class="mondrian-block fill-light line-right hide-mobile"></div>
+            <div class="mondrian-block fill-orange line-right hide-mobile"></div>
+            <div class="mondrian-block text-block-wide fill-yellow mobile-center">my ethical self</div>
+        </div>
+    </div>
 
-    </main>
-    <footer class="show-second layout-container">
-        <p>Made by Lloyd Christian Damalerio (BSIT-2), in partial requirement for the subject GE8 Ethics.</p>
-    </footer> -->
-    
-    <script src="script.js"></script>
+    <div class="footer-actions">
+        <button class="action-btn btn-yellow">See Infographic Version</button>
+        <button class="action-btn btn-white">Scroll to top</button>
+    </div>
+
+    <footer class="main-footer">
+        <p>Made with heart by Lloyd Christian Damalerio (BSIT-2)</p>
+    </footer>
+</section>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
