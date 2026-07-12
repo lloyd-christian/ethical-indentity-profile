@@ -1,18 +1,27 @@
+// For NavBar
+let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
-const stickyPanels = document.querySelectorAll('.sticky-panel');
+const scrollThreshold = 15; 
 
 window.addEventListener('scroll', () => {
-    if (navbar.classList.contains('hidden')) {
-        stickyPanels.forEach(panel => {
-            panel.style.top = '0px';
-            panel.style.height = '100vh';
-        });
-    } else {
-        stickyPanels.forEach(panel => {
-            panel.style.top = '70px';
-            panel.style.height = 'calc(100vh - 70px)';
-        });
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll <= 0) {
+        navbar.classList.remove('hidden');
+        document.body.classList.remove('nav-hidden');
+        return;
     }
+    
+    if (currentScroll > lastScrollTop) {
+        navbar.classList.add('hidden');
+        document.body.classList.add('nav-hidden');
+    } 
+    else if (lastScrollTop - currentScroll > scrollThreshold) {
+        navbar.classList.remove('hidden');
+        document.body.classList.remove('nav-hidden');
+    }
+    
+    lastScrollTop = currentScroll;
 });
 
 function toggleMenu() {

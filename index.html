@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,19 +25,19 @@
             </button>
 
             <div class="menu-links" id="menuLinks">
-                <a href="#" onclick="toggleMenu()">Who am I?</a>
-                <a href="#" onclick="toggleMenu()">My Moral Compass</a>
-                <a href="#" onclick="toggleMenu()">The Experience</a>
-                <a href="#" onclick="toggleMenu()">Ethical Decision</a>
-                <a href="#" onclick="toggleMenu()">For me, Ethics is...</a>
-                <a href="#" onclick="toggleMenu()">At the end of the Ethics course...</a>
-                <a href="#" onclick="toggleMenu()">The Motto</a>
+                <a href="#who-am-i" onclick="toggleMenu()">Who am I?</a>
+                <a href="#moral-compass" onclick="toggleMenu()">My Moral Compass</a>
+                <a href="#experience" onclick="toggleMenu()">The Experience</a>
+                <a href="#ethical-dilemma" onclick="toggleMenu()">Ethical Decision</a>
+                <a href="#personal-ethics-definition" onclick="toggleMenu()">For me, Ethics is...</a>
+                <a href="#end-of-course" onclick="toggleMenu()">At the end of the Ethics course...</a>
+                <a href="#the-motto" onclick="toggleMenu()">The Motto</a>
             </div>
         </nav>
     </header>
     <main>
         <section id="section-title" class="section-wrapper">
-            <div class="content-container centered-title">
+            <div class="content-container centered-title full-viewport-section">
                 <h1 class="title-header">
                     <div>My Ethical</div>
                     <div>Identity Profile</div>
@@ -53,7 +54,7 @@
         </section>
 
         <section id="who-am-i" class="section-wrapper">
-            <div class="content-container">
+            <div class="content-container full-viewport-section">
                 <div class="card">
                     <div class="card-front">
                         <div>
@@ -81,7 +82,7 @@
         </section>
 
 
-        <section id="moral-compass" class="section-wrapper">
+        <section id="moral-compass" class="section-wrapper full-viewport-section">
             <div class="content-container">
                 <h2>My Moral Compass</h2>
                 <p>Here are my 5 values guiding my decisions. Click each button to know how they influence my decisions.
@@ -112,102 +113,93 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             THAT ONE EXPERIENCE SECTION
-             ========================================== -->
         <section id="experience" class="section-wrapper scroll-story-section">
             <div>
-                <div class="scroll-story-grid">
+                <div class="scroll-story-grid content-container">
         
                     <div class="sticky-panel line-right">
-                        <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
-                        <div class="the-progress-vertical">
-                            <p class="progress-step active" data-target="0">PROBLEM.</p>
-                            <p class="progress-step" data-target="1">SOLUTION.</p>
-                            <p class="progress-step" data-target="2">LESSON.</p>
+                        <div class="inner-story-wrapper left-aligned-wrapper">
+                            <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
+                            <div class="the-progress-vertical">
+                                <p class="progress-step active" data-target="0">PROBLEM.</p>
+                                <p class="progress-step" data-target="1">SOLUTION.</p>
+                                <p class="progress-step" data-target="2">LESSON.</p>
+                            </div>
                         </div>
                     </div>
         
-                    <!-- Right Side: Scrolling Content Blocks -->
+                    <!-- Scrolling Right Side -->
                     <div class="scroll-content-panel">
                         <div class="story-block" data-step="0">
-                            <h3>THE PROBLEM</h3>
-                            <p>Back then, there are some people that always tested my peace and autonomy. It reached to the
-                                point that whenever I saw them, I felt stressed and terrified. However, I kept saying "yes" or
-                                go with them because I don't want to lose them.</p>
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE PROBLEM</h3>
+                                <p>Back then, there are some people that always tested my peace and autonomy. It reached to the
+                                    point that whenever I saw them, I felt stressed and terrified. However, I kept saying "yes"
+                                    or go with them because I don't want to lose them.</p>
+                            </div>
                         </div>
                         <div class="story-block" data-step="1">
-                            <h3>THE SOLUTION</h3>
-                            <p>Then, when I decided to say "No" frequently and stay away from them as much as I can, I felt
-                                freedom.</p>
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE SOLUTION</h3>
+                                <p>Then, when I decided to say "No" frequently and stay away from them as much as I can, I felt
+                                    freedom.</p>
+                            </div>
                         </div>
                         <div class="story-block" data-step="2">
-                            <h3>THE LESSON</h3>
-                            <p>Then, I realized that <strong>I need to set boundaries with other people</strong> because that's
-                                the way to attain peace and autonomy. Now, it influenced me that if someone has become an arch
-                                nemesis to my peace, then I'll assert my boundaries and get away as much as I can.</p>
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE LESSON</h3>
+                                <p>Then, I realized that <strong>I need to set boundaries with other people</strong> because
+                                    that's the way to attain peace and autonomy. Now, it influenced me that if someone has
+                                    become an arch nemesis to my peace, then I'll assert my boundaries and get away as much as I
+                                    can.</p>
+                            </div>
                         </div>
                     </div>
         
                 </div>
             </div>
         </section>
-
+        
         <section id="ethical-dilemma" class="section-wrapper scroll-story-section">
             <div>
-                <div class="scroll-story-grid">
+                <div class="scroll-story-grid content-container">
         
                     <div class="sticky-panel line-right">
-                        <h2 class="slider-title">ETHICAL DILEMMA</h2>
-                        <div class="the-progress-vertical">
-                            <p class="progress-step active" data-target="0">PROBLEM.</p>
-                            <p class="progress-step" data-target="1">SOLUTION.</p>
-                            <p class="progress-step" data-target="2">LESSON.</p>
+                        <div class="inner-story-wrapper left-aligned-wrapper">
+                            <h2 class="slider-title">ETHICAL DILEMMA</h2>
+                            <div class="the-progress-vertical">
+                                <p class="progress-step active" data-target="0">PROBLEM.</p>
+                                <p class="progress-step" data-target="1">SOLUTION.</p>
+                                <p class="progress-step" data-target="2">LESSON.</p>
+                            </div>
                         </div>
                     </div>
         
                     <div class="scroll-content-panel">
                         <div class="story-block" data-step="0">
-                            <h3>THE PROBLEM</h3>
-                            <p>You are developing software for a client. While working on the project, you find a copyrighted
-                                source code online that perfectly solves the problem. The client will never know if you copy and
-                                use it without permission. What would you do?</p>
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE PROBLEM</h3>
+                                <p>You are developing software for a client. While working on the project, you find a
+                                    copyrighted source code online that perfectly solves the problem. The client will never know
+                                    if you copy and use it without permission. What would you do?</p>
+                            </div>
                         </div>
                         <div class="story-block" data-step="1">
-                            <h3>THE SOLUTION</h3>
-                            <p>If I see a copyrighted source code that is useful for my project, the first thing to check is
-                                their licensing agreement, specifically, an Open Source License like MIT, BSD 2-Clause, or
-                                Apache License 2.0. These licenses allow usage and modification of their code with the need only
-                                of crediting them in the LICENSE or NOTICE file.</p>
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE SOLUTION</h3>
+                                <p>If I see a copyrighted source code that is useful for my project, the first thing to check is
+                                    their licensing agreement, specifically, an Open Source License like MIT, BSD 2-Clause, or
+                                    Apache License 2.0. These licenses allow usage and modification of their code with the need
+                                    only of crediting them in the LICENSE or NOTICE file.</p>
+                            </div>
                         </div>
                         <div class="story-block" data-step="2">
-                            <h3>THE VALUE</h3>
-                            <p>The value that guides me through this decision is integrity to honor, accountability to have
-                                responsibility, and respect to these people who worked hard to make those source code. This
-                                decision reflects a kind of IT professional where crediting is important when you use your code
-                                as they worked tirelessly to make that happen.</p>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-
-        <section class="section-wrapper modular-split-section">
-            <div>
-                <div class="modular-split-grid">
-                    <div class="modular-content-col line-right">
-                        <h2 class="modular-split-title">FOR ME,<br>ETHICS IS...</h2>
-                        <p class="modular-split-p">a guide that leads myself into the morally right one and avoids the morally
-                            wrong one. Think of it as a parent, who always reminds and reprimands you. Ethics done this by
-                            reminding you that every action you do is either right or wrong, and if you do wrong actions,
-                            consequences follow like a parent reprimanded their children.</p>
-                    </div>
-
-                    <div class="modular-visual-col fill-orange">
-                        <div class="neobrutalist-shape-shadow">
-                            <div class="neobrutalist-shape-item mask-heart">
-                                <img src="images/pavement-by-ryan-stefan.webp" alt="Parent and child painted on pavement">
+                            <div class="inner-story-wrapper right-aligned-wrapper">
+                                <h3>THE VALUE</h3>
+                                <p>The value that guides me through this decision is integrity to honor, accountability to have
+                                    responsibility, and respect to these people who worked hard to make those source code. This
+                                    decision reflects a kind of IT professional where crediting is important when you use your
+                                    code as they worked tirelessly to make that happen.</p>
                             </div>
                         </div>
                     </div>
@@ -216,33 +208,47 @@
             </div>
         </section>
 
+        <section id="personal-ethics-definition" class="section-wrapper modular-split-section">
+            <div class="modular-split-grid">
+                <div class="modular-content-col line-right">
+                    <h2 class="modular-split-title">FOR ME,<br>ETHICS IS....</h2>
+                    <p class="modular-split-p">a guide that leads myself into the morally right one and avoids the morally
+                    wrong one. Think of it as a parent, who always reminds and reprimands you. Ethics done this by
+                    reminding you that every action you do is either right or wrong, and if you do wrong actions,
+                    consequences follow like a parent reprimanded their children.</p>
+                </div>
+                <div class="modular-visual-col fill-orange">
+                    <div class="neobrutalist-shape-shadow">
+                        <div class="neobrutalist-shape-item mask-heart">
+                            <img src="images/pavement-by-ryan-stefan.webp" alt="Parent and child painted on pavement">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="end-of-course" class="section-wrapper modular-split-section">
-            <div>
-                <div class="modular-split-grid">
-                    <div class="modular-content-col line-right">
-                        <h2 class="modular-split-title">AT THE END OF ETHICS COURSE,</h2>
-                        <p class="modular-split-p">I hope to become someone who has accountability and integrity for every
-                            action and decision, empathy to other people, a genuine respect for myself and others, has an
-                            autonomy for every personal decision and avoid being dragged by other people’s choices, being
-                            assertive to my boundaries, and of course, being able to recognize and reflect which action is
-                            correct and wrong. With all of the aforementioned things, I’ll be able to become an ethical person.
-                        </p>
-                    </div>
-        
-                    <div class="modular-visual-col fill-orange">
-                        <div class="neobrutalist-shape-shadow">
-                            <div class="neobrutalist-shape-item mask-circle">
-                                <img src="images/doble-moral-by-jon-tyson.webp" alt="Path graphic">
-                            </div>
+            <div class="modular-split-grid">
+                <div class="modular-content-col line-right">
+                    <h2 class="modular-split-title">AT THE END OF ETHICS COURSE,</h2>
+                    <p class="modular-split-p">I hope to become someone who has accountability and integrity for every
+                    action and decision, empathy to other people, a genuine respect for myself and others, has an
+                    autonomy for every personal decision and avoid being dragged by other people’s choices, being
+                    assertive to my boundaries, and of course, being able to recognize and reflect which action is
+                    correct and wrong. With all of the aforementioned things, I’ll be able to become an ethical person.</p>
+                </div>
+                <div class="modular-visual-col fill-orange">
+                    <div class="neobrutalist-shape-shadow">
+                        <div class="neobrutalist-shape-item mask-circle">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Path graphic">
                         </div>
                     </div>
-        
                 </div>
             </div>
         </section>
 
-        <section class="section-wrapper">
-            <div class="content-container">
+        <section id="the-motto" class="section-wrapper">
+            <div class="content-container full-viewport-section">
                 <div class="card-container quote-card">
                     <blockquote cite="https://www.trvst.world/mind-body/boundaries-quotes/">
                         <p class="quote-text">"Each time you set a healthy boundary, you say 'yes' to more freedom."</p>
@@ -252,7 +258,7 @@
             </div>
         </section>
 
-        <section id="conclusion" class="section-wrapper footer-grid-section">
+        <section id="conclusion" class="section-wrapper footer-grid-section full-viewport-section">
             <div class="mondrian-border-wrapper">
                 <div class="mondrian-container">
                     <div class="mondrian-block text-block fill-orange mobile-center line-right line-bottom">And now
@@ -276,7 +282,8 @@
 
             <div class="footer-actions">
                 <button class="action-btn btn-yellow">See Infographic Version</button>
-                <button class="action-btn btn-white">Scroll to top</button>
+                <!-- <button class="action-btn btn-white">Scroll to top</button> -->
+                <a href="#section-title">Scroll to Top</a>
             </div>
 
             <footer class="main-footer">
