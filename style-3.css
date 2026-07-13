@@ -49,8 +49,6 @@ a {
     font-size: var(--text-size);
 }
 
-
-
 /* NAVIGATION BAR */
 * {
     margin: 0;
@@ -302,59 +300,12 @@ a {
     padding: 24px;
 }
 
-/* SECTION 2 */
-
-#moral-compass {
-    background-color: #f5f5f5;
-}
-
-.values-container {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    width: 100%;
-}
-
-.grid-cell {
-    width: 100%;
-    height: auto;
-}
-
-.item {
-    width: 100%;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#the-motto {
     background-color: var(--background);
-    border: 5px solid var(--black);
-    word-break: break-word;
-    overflow: hidden;
-    padding: 15px;
-    font-family: var(--text-font), sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 2.5vw, 1.5rem); 
-    line-height: 1.3;
-    color: var(--black);
-    cursor: pointer;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.item:hover,
-.item.revealed {
-    background-color: var(--yellow);
-    box-shadow: var(--box-shadow);
-}
-
-.item.revealed {
-    height: auto;
-}
-
-@media (min-width: 768px) {
-    .values-container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
+    background-image: 
+        linear-gradient(to right, rgba(18, 18, 18, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(18, 18, 18, 0.18) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .quote-card {
@@ -480,6 +431,52 @@ a {
     
     .line-right  { border-right: 5px solid var(--black); }
     .line-bottom { border-bottom: 5px solid var(--black); }
+}
+
+/* MOBILE FOOTER MONDRIAN LAYOUT */
+@media (max-width: 767px) {
+    .mondrian-container .hide-mobile {
+        display: none !important;
+    }
+
+    .mondrian-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100%;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .mondrian-block.text-block,
+    .mondrian-block.text-block-wide {
+        width: 100% !important;
+        min-height: 110px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 24px !important;
+        font-size: clamp(2rem, 6vw, 3rem) !important;
+        line-height: 1.1 !important;
+        border-right: none !important;
+        border-bottom: 5px solid var(--black) !important;
+    }
+
+    .mondrian-container div:nth-child(1) {
+        background-color: var(--orange) !important;
+        color: var(--black) !important;
+    }
+
+    .mondrian-container div:nth-child(7) {
+        background-color: var(--black) !important;
+        color: var(--background) !important;
+    }
+
+    .mondrian-container .text-block-wide {
+        background-color: var(--yellow) !important;
+        color: var(--black) !important;
+        border-bottom: none !important;
+    }
 }
 
 .footer-actions {
@@ -688,115 +685,6 @@ a {
     -webkit-mask-position: center;
 }
 
-/* FOR EXPERIENCE AND DILEMMA */
-
-.scroll-story-section {
-    width: 100%;
-    background-color: var(--background);
-    position: relative;
-}
-
-.scroll-story-grid {
-    display: grid !important;
-    grid-template-columns: 50% 50% !important; 
-    align-items: start;
-}
-
-.sticky-panel {
-    background-color: var(--background);
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    border-right: 5px solid var(--black);
-    z-index: 10;
-    transition: top 0.3s ease, height 0.3s ease;
-}
-
-body.nav-hidden .sticky-panel {
-    top: 0px;
-    height: 100vh;
-}
-
-.sticky-panel .slider-title {
-    font-family: var(--heading-font);
-    font-size: var(--heading2-size);
-    margin: 10px 0;
-}
-
-.the-progress-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.the-progress-vertical .progress-step {
-    font-family: var(--text-font), sans-serif;
-    font-weight: 700;
-    font-size: var(--text-size);
-    color: var(--black);
-    opacity: 0.25;
-    transition: opacity 0.3s ease, transform 0.2s ease;
-    margin: 0;
-}
-
-.the-progress-vertical .progress-step.active {
-    opacity: 1 !important;
-    transform: scale(1.00);
-}
-
-.scroll-content-panel {
-    flex-direction: column;
-}
-
-.story-block {
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh) !important; 
-    box-sizing: border-box;
-}
-
-.story-block:last-child {
-    border-bottom: none;
-}
-
-.story-block {
-    font-family: var(--heading-font), sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.story-block p {
-    line-height: 1.5;
-}
-
-@media (max-width: 767px) {
-    .sticky-panel .slider-title {
-        font-size: 1.4rem;
-        margin: 0 0 5px 0;
-    }
-
-    .the-progress-vertical {
-        flex-direction: row;
-        gap: 20px;
-        margin-top: 8px;
-    }
-
-    .the-progress-vertical .progress-step {
-        font-size: 0.9rem;
-    }
-
-    body.nav-hidden .sticky-panel {
-        top: 0px;
-    }
-}
-
 .full-viewport-section {
     width: 100%;
     min-height: 100dvh;
@@ -863,4 +751,289 @@ body.nav-hidden .sticky-panel {
 
 footer p {
     color: var(--white);
+}
+
+/* SECTION 2 - SHOWCASE SCROLL CARDS */
+#moral-compass {
+    background-color: var(--background);
+    padding: 60px 0;
+}
+
+.showcase-scroll-track {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    
+    padding: 10px 16px 24px 16px !important; 
+    margin-bottom: 0px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.showcase-scroll-track::-webkit-scrollbar {
+    height: 24px !important;
+    display: block !important;
+}
+
+.showcase-scroll-track::-webkit-scrollbar-track {
+    background: var(--background) !important;
+    border-style: solid;
+    border-width: 5px 5px 5px 6px;
+    border-color: var(--black);
+    
+}
+
+.showcase-scroll-track::-webkit-scrollbar-thumb {
+    background: var(--yellow) !important;
+    border: 3px solid var(--black) !important;
+    cursor: grab;
+}
+
+.showcase-scroll-track::-webkit-scrollbar-thumb:hover {
+    background: var(--orange) !important;
+}
+
+.showcase-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.control-btn {
+    font-family: var(--text-font), sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--black);
+    cursor: pointer;
+    background-color: var(--background);
+    box-shadow: 4px 4px 0px 0px var(--black);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.control-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--black);
+    background-color: var(--yellow);
+}
+
+.control-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--black);
+}
+
+.showcase-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    border: 5px solid var(--black);
+    box-shadow: var(--box-shadow);
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.showcase-card:nth-child(odd) {
+    background-color: var(--yellow);
+}
+
+.showcase-card:nth-child(even) {
+    background-color: var(--orange);
+}
+
+.showcase-symbol-wrapper {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase-symbol-wrapper img,
+.showcase-symbol-wrapper svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.showcase-placeholder-symbol {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.showcase-content h3 {
+    font-family: var(--heading-font), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.showcase-content p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+html::-webkit-scrollbar {
+    width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--background);
+    border-left: 5px solid var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-top: 5px solid var(--black);
+    border-bottom: 5px solid var(--black);
+    border-left: 5px solid var(--black);
+    border-radius: 0px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange);
+}
+
+.magic-container {
+    width: 100%;
+    background-color: var(--background);
+    border-bottom: 5px solid var(--black);
+}
+
+/* HERE FOR EXPERIENCE AND DILEMMA, THE NEW */
+
+.magic-container {
+    width: 100%;
+    background-color: var(--background);
+    border-bottom: 5px solid var(--black);
+}
+
+.magic-scroll-runway {
+    height: 350vh;
+    position: relative;
+}
+
+.magic-sticky-viewport {
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease, height 0.3s ease;
+}
+
+body.nav-hidden .magic-sticky-viewport {
+    top: 0px;
+    height: 100vh;
+}
+
+.magic-sticky-viewport .slider-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--background); 
+    border-bottom: 4px solid var(--black); 
+    text-align: center;
+    z-index: 60; 
+}
+
+.magic-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 140px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    background-color: var(--background); 
+}
+
+.layer-problem { z-index: 1; }
+.layer-solution { z-index: 2; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+.layer-lesson   { z-index: 3; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+
+.magic-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.magic-img {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    border: 4px solid var(--black);
+}
+
+.magic-text-wrapper h3 {
+    font-family: var(--heading-font), sans-serif;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.magic-text-wrapper p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.magic-sweep-line {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 8px; 
+    background-color: var(--black);
+    z-index: 50;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.magic-sweep-line .guide-text {
+    font-family: var(--heading-font), sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    background-color: var(--black);
+    color: var(--background);
+    padding: 6px 12px;
+    position: absolute;
+    right: 40px;
+    top: 14px;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }

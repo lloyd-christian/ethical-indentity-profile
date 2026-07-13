@@ -80,74 +80,115 @@
             </div>
         </section>
 
-
         <section id="moral-compass" class="section-wrapper full-viewport-section">
             <div class="content-container">
                 <h2>My Moral Compass</h2>
-                <p>Here are my 5 values guiding my decisions. Click each button to know how they influence my decisions.
-                </p>
+                <p class="section-subtitle">Here are the 5 core values guiding my decisions. Scroll horizontally to
+                    explore.</p>
 
-                <div class="values-container">
-                    <div class="grid-cell">
-                        <button class="item"
-                            data-text="Realistic allows me to properly weigh in the positive and negative outcomes of my decisions.">Realistic</button>
+                <div class="showcase-scroll-track">
+                    <div class="showcase-scroll-track">
+
+                        <div class="showcase-card">
+                            <div class="showcase-symbol-wrapper">
+                                <img src="images/design-asset-1.svg" alt="Realistic symbol">
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Realistic</h3>
+                                <p>Realistic allows me to properly weigh in the positive and negative outcomes of my
+                                    decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="showcase-card">
+                            <div class="showcase-symbol-wrapper">
+                                <img src="images/design-asset-2.svg" alt="Empathy symbol">
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Empathy</h3>
+                                <p>Empathy allows me to weigh in the possible impact of my decisions to others.</p>
+                            </div>
+                        </div>
+
+                        <div class="showcase-card">
+                            <div class="showcase-symbol-wrapper">
+                                <img src="images/design-asset-3.svg" alt="Autonomy symbol">
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Autonomy</h3>
+                                <p>Autonomy ensures that my personal (not group decision) decision is purely thought by
+                                    me and it was not
+                                    influenced by others.</p>
+                            </div>
+                        </div>
+
+                        <div class="showcase-card">
+                            <div class="showcase-symbol-wrapper">
+                                <img src="images/design-asset-4.svg" alt="Honesty symbol">
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Honesty</h3>
+                                <p>Honesty allows me to know which decisions is the right thing to do.</p>
+                            </div>
+                        </div>
+
+                        <div class="showcase-card">
+                            <div class="showcase-symbol-wrapper">
+                                <img src="images/design-asset-5.svg" alt="Authenticity symbol">
+                            </div>
+                            <div class="showcase-content">
+                                <h3>Authenticity</h3>
+                                <p>Authenticity allows me to made decision that aligned with my true self and my values.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="grid-cell">
-                        <button class="item"
-                            data-text="Empathy allows me to weigh in the possible impact of my decisions to others.">Empathy</button>
-                    </div>
-                    <div class="grid-cell">
-                        <button class="item"
-                            data-text="Autonomy ensures that my personal (not group decision) decision is purely thought by me and it was not influenced by others.">Autonomy</button>
-                    </div>
-                    <div class="grid-cell">
-                        <button class="item"
-                            data-text="Honesty allows me to know which decisions is the right thing to do.">Honesty</button>
-                    </div>
-                    <div class="grid-cell">
-                        <button class="item"
-                            data-text="Authenticity allows me to made decision that aligned with my true self and my values.">Authenticity</button>
-                    </div>
+
                 </div>
+                <div class="showcase-controls">
+                    <button class="control-btn btn-white" id="scrollPrev" aria-label="Scroll left">←</button>
+                    <button class="control-btn btn-white" id="scrollNext" aria-label="Scroll right">→</button>
+                </div>
+
             </div>
         </section>
 
-        <section id="experience" class="section-wrapper scroll-story-section">
-            <div>
-                <div class="scroll-story-grid content-container">
+        <section id="experience" class="magic-container">
+            <div class="magic-scroll-runway">
+                <div class="magic-sticky-viewport">
+                    <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
 
-                    <div class="sticky-panel line-right">
-                        <div class="inner-story-wrapper left-aligned-wrapper">
-                            <h2 class="slider-title">THAT ONE EXPERIENCE</h2>
-                            <div class="the-progress-vertical">
-                                <p class="progress-step active" data-target="0">PROBLEM.</p>
-                                <p class="progress-step" data-target="1">SOLUTION.</p>
-                                <p class="progress-step" data-target="2">LESSON.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="scroll-content-panel">
-                        <div class="story-block" data-step="0">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    <div class="magic-layer layer-problem">
+                        <div class="magic-card-content">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Experience Problem" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE PROBLEM</h3>
                                 <p>Back then, there are some people that always tested my peace and autonomy. It reached
                                     to the
                                     point that whenever I saw them, I felt stressed and terrified. However, I kept
-                                    saying "yes"
+                                    saying 'yes'
                                     or go with them because I don't want to lose them.</p>
                             </div>
                         </div>
-                        <div class="story-block" data-step="1">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    </div>
+
+                    <div class="magic-layer layer-solution" id="exp-layer-sol">
+                        <div class="magic-card-content">
+                            <img src="images/pavement-by-ryan-stefan.webp" alt="Experience Solution" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE SOLUTION</h3>
-                                <p>Then, when I decided to say "No" frequently and stay away from them as much as I can,
+                                <p>Then, when I decided to say 'No' frequently and stay away from them as much as I can,
                                     I felt
                                     freedom.</p>
                             </div>
                         </div>
-                        <div class="story-block" data-step="2">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    </div>
+
+                    <div class="magic-layer layer-lesson" id="exp-layer-les">
+                        <div class="magic-card-content">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Experience Lesson" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE LESSON</h3>
                                 <p>Then, I realized that <strong>I need to set boundaries with other people</strong>
                                     because
@@ -160,28 +201,22 @@
                         </div>
                     </div>
 
+                    <div class="magic-sweep-line" id="exp-magic-line">
+                        <span class="guide-text">KEEP SCROLLING</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="ethical-dilemma" class="section-wrapper scroll-story-section">
-            <div>
-                <div class="scroll-story-grid content-container">
+        <section id="ethical-dilemma" class="magic-container">
+            <div class="magic-scroll-runway">
+                <div class="magic-sticky-viewport">
+                    <h2 class="slider-title">ETHICAL DILEMMA</h2>
 
-                    <div class="sticky-panel line-right">
-                        <div class="inner-story-wrapper left-aligned-wrapper">
-                            <h2 class="slider-title">ETHICAL DILEMMA</h2>
-                            <div class="the-progress-vertical">
-                                <p class="progress-step active" data-target="0">PROBLEM.</p>
-                                <p class="progress-step" data-target="1">SOLUTION.</p>
-                                <p class="progress-step" data-target="2">LESSON.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="scroll-content-panel">
-                        <div class="story-block" data-step="0">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    <div class="magic-layer layer-problem">
+                        <div class="magic-card-content">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Problem" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE PROBLEM</h3>
                                 <p>You are developing software for a client. While working on the project, you find a
                                     copyrighted source code online that perfectly solves the problem. The client will
@@ -189,8 +224,12 @@
                                     if you copy and use it without permission. What would you do?</p>
                             </div>
                         </div>
-                        <div class="story-block" data-step="1">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    </div>
+
+                    <div class="magic-layer layer-solution" id="dilemma-layer-sol">
+                        <div class="magic-card-content">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Solution" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE SOLUTION</h3>
                                 <p>If I see a copyrighted source code that is useful for my project, the first thing to
                                     check is
@@ -201,8 +240,12 @@
                                     only of crediting them in the LICENSE or NOTICE file.</p>
                             </div>
                         </div>
-                        <div class="story-block" data-step="2">
-                            <div class="inner-story-wrapper right-aligned-wrapper">
+                    </div>
+
+                    <div class="magic-layer layer-lesson" id="dilemma-layer-les">
+                        <div class="magic-card-content">
+                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Value" class="magic-img">
+                            <div class="magic-text-wrapper">
                                 <h3>THE VALUE</h3>
                                 <p>The value that guides me through this decision is integrity to honor, accountability
                                     to have
@@ -215,6 +258,9 @@
                         </div>
                     </div>
 
+                    <div class="magic-sweep-line" id="dilemma-magic-line">
+                        <span class="guide-text">KEEP SCROLLING</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -262,12 +308,14 @@
 
         <section id="the-motto" class="section-wrapper">
             <div class="content-container full-viewport-section">
+
                 <div class="card-container quote-card">
                     <blockquote cite="https://www.trvst.world/mind-body/boundaries-quotes/">
                         <p class="quote-text">"Each time you set a healthy boundary, you say 'yes' to more freedom."</p>
                         <p class="quote-author">— Nancy Levin, <cite>Life Coach</cite></p>
                     </blockquote>
                 </div>
+
             </div>
         </section>
 

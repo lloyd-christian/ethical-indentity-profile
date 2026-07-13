@@ -75,34 +75,44 @@ items.forEach(item => {
 });
 
 // For Experience and Ethical Dillema
-document.addEventListener("DOMContentLoaded", () => {
-    const scrollSections = document.querySelectorAll(".scroll-story-section");
+function handleThreeLayerPeel(sectionId, lineId, solutionLayerId, lessonLayerId) {
+    const section = document.getElementById(sectionId);
+    const line = document.getElementById(lineId);
+    const solutionLayer = document.getElementById(solutionLayerId);
+    const lessonLayer = document.getElementById(lessonLayerId);
 
-    scrollSections.forEach((section) => {
-        const steps = section.querySelectorAll(".progress-step");
-        const blocks = section.querySelectorAll(".story-block");
+    if (!section || !line || !solutionLayer || !lessonLayer) return;
 
-        const observerOptions = {
-            root: null,
-            rootMargin: "-30% 0px -40% 0px",
-            threshold: 0.1
-        };
+    const rect = section.getBoundingClientRect();
+    const runwayHeight = section.offsetHeight;
+    
+    let progress = -rect.top / (runwayHeight - window.innerHeight);
+    progress = Math.max(0, Math.min(1, progress));
 
-        const observerCallback = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const stepIndex = entry.target.getAttribute("data-step");
+    const percentage = progress * 100;
 
-                    steps.forEach((step) => step.classList.remove("active"));
+    let solutionProgress = progress / 0.5; 
+    solutionProgress = Math.max(0, Math.min(1, solutionProgress)) * 100;
 
-                    if (steps[stepIndex]) {
-                        steps[stepIndex].classList.add("active");
-                    }
-                }
-            });
-        };
+    let lessonProgress = (progress - 0.5) / 0.5;
+    lessonProgress = Math.max(0, Math.min(1, lessonProgress)) * 100;
 
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        blocks.forEach((block) => observer.observe(block));
-    });
+    if (percentage <= 50) {
+        const lineTop = 100 - solutionProgress;
+        line.style.top = `${lineTop}%`;
+        
+        solutionLayer.style.clipPath = `polygon(0 ${lineTop}%, 100% ${lineTop}%, 100% 100%, 0% 100%)`;
+        lessonLayer.style.clipPath = `polygon(0 100%, 100% 100%, 100% 100%, 0 100%)`;
+    } else {
+        const lineTop = 100 - lessonProgress;
+        line.style.top = `${lineTop}%`;
+        
+        solutionLayer.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, 0 100%)`; // Keep fully visible
+        lessonLayer.style.clipPath = `polygon(0 ${lineTop}%, 100% ${lineTop}%, 100% 100%, 0% 100%)`;
+    }
+}
+
+window.addEventListener('scroll', () => {
+    handleThreeLayerPeel('experience', 'exp-magic-line', 'exp-layer-sol', 'exp-layer-les');
+    handleThreeLayerPeel('ethical-dilemma', 'dilemma-magic-line', 'dilemma-layer-sol', 'dilemma-layer-les');
 });
