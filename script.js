@@ -41,37 +41,20 @@ function toggleMenu() {
 // For card flip animation
 const card = document.querySelector('.card');
 
-card.addEventListener('click', () => {
+card.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        
+        card.classList.remove('is-flipped');
+        
+        setTimeout(() => {
+            window.location.hash = targetId;
+        }, 400); 
+        return;
+    }
+
     card.classList.toggle('is-flipped');
-});
-
-// For moral compass
-const items = document.querySelectorAll('.item');
-
-items.forEach(item => {
-    let timerId = null;
-
-    item.addEventListener('click', () => {
-        const originalText = item.textContent;
-        const alternateText = item.getAttribute('data-text');
-
-        if (item.classList.contains('revealed')) return;
-
-        item.textContent = alternateText;
-        item.setAttribute('data-text', originalText);
-        item.classList.add('revealed');
-
-        clearTimeout(timerId);
-
-        timerId = setTimeout(() => {
-        const currentText = item.textContent;
-        const originalSavedText = item.getAttribute('data-text');
-
-        item.textContent = originalSavedText;
-        item.setAttribute('data-text', currentText);
-        item.classList.remove('revealed');
-        }, 5000); 
-    });
 });
 
 // For Experience and Ethical Dillema
@@ -107,7 +90,7 @@ function handleThreeLayerPeel(sectionId, lineId, solutionLayerId, lessonLayerId)
         const lineTop = 100 - lessonProgress;
         line.style.top = `${lineTop}%`;
         
-        solutionLayer.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, 0 100%)`; // Keep fully visible
+        solutionLayer.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, 0 100%)`;
         lessonLayer.style.clipPath = `polygon(0 ${lineTop}%, 100% ${lineTop}%, 100% 100%, 0% 100%)`;
     }
 }

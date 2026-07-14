@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward,close,menu"
+        rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -18,9 +23,8 @@
             <div class="logo">Lloyd Christian</div>
 
             <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="material-symbols-outlined menu-icon">menu</span>
+                <span class="material-symbols-outlined close-icon">close</span>
             </button>
 
             <div class="menu-links" id="menuLinks">
@@ -45,10 +49,13 @@
                 <p class="title-subheader">My creative format for GE8 Ethics</p>
                 <p class="title-subheader">Who am I as a moral person? Scroll to begin</p>
 
-                <div class="arrow">
-                    <span></span>
+                <div class="arrow-container">
+                    <div class="arrow">
+                        <span class="material-symbols-outlined">
+                            arrow_downward
+                        </span>
+                    </div>
                 </div>
-            </div>
 
         </section>
 
@@ -56,25 +63,41 @@
             <div class="content-container full-viewport-section">
                 <div class="card">
                     <div class="card-front">
-                        <div>
+                        <div class="card-header">
                             <h2>WHO AM I?</h2>
                         </div>
-                        <div class="card-front-image">
-                        </div>
-                        <div>
-                            <p>Click or Tap the card to flip...</p>
-                        </div>
+                        <div class="card-body front-bg">
 
+                        </div>
+                        <div class="card-footer">
+                            <p>Click/Tap the card to open...</p>
+                            <div class="status-box">
+                                <img src="images/design-asset-9.svg" alt="Status Symbol" class="footer-symbol">
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card-back">
-                        <p>Hi! I'm</p>
-                        <p>Lloyd Christian Damalerio</p>
-                        <p>and I'm</p>
-                        <p>19 years old</p>
-                        <p>Currently enrolled at:</p>
-                        <p>BS Information Technology - 2nd Year</p>
-                        <p>3 words to describe are:</p>
-                        <p><strong>HUMBLE. ACTIVE. DISCIPLINED.</strong></p>
+                        <div class="card-header">
+                        </div>
+                        <div class="card-body back-content">
+                            <div class="text-side">
+                                <p>Hi there! I'm Lloyd Christian Damalerio and I am 19 years old. Currently enrolled as
+                                    a 2nd
+                                    year student under BS Information technology.</p>
+                                <p class="desc-words">Three words to describe myself:<br><strong>HUMBLE. ACTIVE.
+                                        DISCIPLINED.</strong></p>
+                            </div>
+                            <div class="image-side">
+                                <img src="images/who-i-am-back.png" alt="Lloyd Profile">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p>Click/Tap the card to close...</p>
+                            <div class="status-box">
+                                <img src="images/design-asset-9.svg" alt="Status Symbol" class="footer-symbol">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,70 +110,59 @@
                     explore.</p>
 
                 <div class="showcase-scroll-track">
-                    <div class="showcase-scroll-track">
-
-                        <div class="showcase-card">
-                            <div class="showcase-symbol-wrapper">
-                                <img src="images/design-asset-1.svg" alt="Realistic symbol">
-                            </div>
-                            <div class="showcase-content">
-                                <h3>Realistic</h3>
-                                <p>Realistic allows me to properly weigh in the positive and negative outcomes of my
-                                    decisions.</p>
-                            </div>
+                    <div class="showcase-card">
+                        <div class="showcase-symbol-wrapper">
+                            <img src="images/design-asset-1.svg" alt="Realistic symbol">
                         </div>
-
-                        <div class="showcase-card">
-                            <div class="showcase-symbol-wrapper">
-                                <img src="images/design-asset-2.svg" alt="Empathy symbol">
-                            </div>
-                            <div class="showcase-content">
-                                <h3>Empathy</h3>
-                                <p>Empathy allows me to weigh in the possible impact of my decisions to others.</p>
-                            </div>
+                        <div class="showcase-content">
+                            <h3>Realistic</h3>
+                            <p>Realistic allows me to properly weigh in the positive and negative outcomes of my
+                                decisions.</p>
                         </div>
-
-                        <div class="showcase-card">
-                            <div class="showcase-symbol-wrapper">
-                                <img src="images/design-asset-3.svg" alt="Autonomy symbol">
-                            </div>
-                            <div class="showcase-content">
-                                <h3>Autonomy</h3>
-                                <p>Autonomy ensures that my personal (not group decision) decision is purely thought by
-                                    me and it was not
-                                    influenced by others.</p>
-                            </div>
-                        </div>
-
-                        <div class="showcase-card">
-                            <div class="showcase-symbol-wrapper">
-                                <img src="images/design-asset-4.svg" alt="Honesty symbol">
-                            </div>
-                            <div class="showcase-content">
-                                <h3>Honesty</h3>
-                                <p>Honesty allows me to know which decisions is the right thing to do.</p>
-                            </div>
-                        </div>
-
-                        <div class="showcase-card">
-                            <div class="showcase-symbol-wrapper">
-                                <img src="images/design-asset-5.svg" alt="Authenticity symbol">
-                            </div>
-                            <div class="showcase-content">
-                                <h3>Authenticity</h3>
-                                <p>Authenticity allows me to made decision that aligned with my true self and my values.
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
 
-                </div>
-                <div class="showcase-controls">
-                    <button class="control-btn btn-white" id="scrollPrev" aria-label="Scroll left">←</button>
-                    <button class="control-btn btn-white" id="scrollNext" aria-label="Scroll right">→</button>
-                </div>
+                    <div class="showcase-card">
+                        <div class="showcase-symbol-wrapper">
+                            <img src="images/design-asset-2.svg" alt="Empathy symbol">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Empathy</h3>
+                            <p>Empathy allows me to weigh in the possible impact of my decisions to others.</p>
+                        </div>
+                    </div>
 
+                    <div class="showcase-card">
+                        <div class="showcase-symbol-wrapper">
+                            <img src="images/design-asset-3.svg" alt="Autonomy symbol">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Autonomy</h3>
+                            <p>Autonomy ensures that my personal (not group decision) decision is purely thought by me
+                                and it
+                                was not influenced by others.</p>
+                        </div>
+                    </div>
+
+                    <div class="showcase-card">
+                        <div class="showcase-symbol-wrapper">
+                            <img src="images/design-asset-4.svg" alt="Honesty symbol">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Honesty</h3>
+                            <p>Honesty allows me to know which decisions is the right thing to do.</p>
+                        </div>
+                    </div>
+
+                    <div class="showcase-card">
+                        <div class="showcase-symbol-wrapper">
+                            <img src="images/design-asset-5.svg" alt="Authenticity symbol">
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Authenticity</h3>
+                            <p>Authenticity allows me to made decision that aligned with my true self and my values.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -161,7 +173,7 @@
 
                     <div class="magic-layer layer-problem">
                         <div class="magic-card-content">
-                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Experience Problem" class="magic-img">
+                            <img src="images/design-asset-6.svg" alt="Experience Problem" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE PROBLEM</h3>
                                 <p>Back then, there are some people that always tested my peace and autonomy. It reached
@@ -175,7 +187,7 @@
 
                     <div class="magic-layer layer-solution" id="exp-layer-sol">
                         <div class="magic-card-content">
-                            <img src="images/pavement-by-ryan-stefan.webp" alt="Experience Solution" class="magic-img">
+                            <img src="images/design-asset-7.svg" alt="Experience Solution" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE SOLUTION</h3>
                                 <p>Then, when I decided to say 'No' frequently and stay away from them as much as I can,
@@ -187,7 +199,7 @@
 
                     <div class="magic-layer layer-lesson" id="exp-layer-les">
                         <div class="magic-card-content">
-                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Experience Lesson" class="magic-img">
+                            <img src="images/design-asset-8.svg" alt="Experience Lesson" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE LESSON</h3>
                                 <p>Then, I realized that <strong>I need to set boundaries with other people</strong>
@@ -215,7 +227,7 @@
 
                     <div class="magic-layer layer-problem">
                         <div class="magic-card-content">
-                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Problem" class="magic-img">
+                            <img src="images/design-asset-6.svg" alt="Dilemma Problem" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE PROBLEM</h3>
                                 <p>You are developing software for a client. While working on the project, you find a
@@ -228,7 +240,7 @@
 
                     <div class="magic-layer layer-solution" id="dilemma-layer-sol">
                         <div class="magic-card-content">
-                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Solution" class="magic-img">
+                            <img src="images/design-asset-7.svg" alt="Dilemma Solution" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE SOLUTION</h3>
                                 <p>If I see a copyrighted source code that is useful for my project, the first thing to
@@ -244,7 +256,7 @@
 
                     <div class="magic-layer layer-lesson" id="dilemma-layer-les">
                         <div class="magic-card-content">
-                            <img src="images/doble-moral-by-jon-tyson.webp" alt="Dilemma Value" class="magic-img">
+                            <img src="images/design-asset-8.svg" alt="Dilemma Value" class="magic-img">
                             <div class="magic-text-wrapper">
                                 <h3>THE VALUE</h3>
                                 <p>The value that guides me through this decision is integrity to honor, accountability
@@ -319,7 +331,7 @@
             </div>
         </section>
 
-        <section id="conclusion" class="section-wrapper footer-grid-section full-viewport-section">
+        <section id="conclusion" class="section-wrapper footer-grid-section">
             <div class="mondrian-border-wrapper">
                 <div class="mondrian-container">
                     <div class="mondrian-block text-block fill-orange mobile-center line-right line-bottom">And now
@@ -346,12 +358,29 @@
                 <a href="#section-title"><button class="action-btn btn-white">Scroll to top</button></a>
             </div>
 
+            <div class="credits-container">
+                <div class="stationary-label">Thanks to</div>
+                <div class="marquee-viewport">
+                    <div class="marquee-track">
+                        <span class="marquee-text">
+                            Jon Tyson (Unsplash) • Ryan Stefan (Unsplash) • GraphicSymbols (Neobrutalism Symbols) •
+                            Google (Material Symbols and Fonts)
+                            •&nbsp;
+                        </span>
+                        <span class="marquee-text" aria-hidden="true">
+                            Jon Tyson (Unsplash) • Ryan Stefan (Unsplash) • GraphicSymbols (Neobrutalism Symbols) •
+                            Google (Material Symbols and Fonts)
+                            •&nbsp;
+                        </span>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>Made with heart by Lloyd Christian Damalerio (BSIT-2).</p>
-        <p>In partial requirement for GE8 Ethics.</p>
+        <p>Made with heart by Lloyd Christian Damalerio (BSIT-2).<br>In partial requirement for GE8 Ethics.</p>
     </footer>
     <script src="script.js"></script>
 </body>
