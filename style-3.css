@@ -198,40 +198,6 @@ a {
 }
 
 /* For the arrows */
-/* .arrow {
-    display: inline-block;
-    transform: rotate(45deg);
-    margin-top: 3rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform: rotate(0deg);
-}
-
-.arrow span {
-    display: block;
-    width: 1.5vw;
-    height: 1.5vw;
-    transform: rotate(0deg);
-    margin: -10px;
-    animation: animate 2s infinite;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(0deg) translate(-20px, -20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(0deg) translate(20px, 20px);
-    }
-} */
-
-/* Container to handle perfect centering */
 .arrow-container {
     display: flex;
     justify-content: center;
@@ -364,7 +330,7 @@ a {
 }
 
 .front-bg {
-    background-image: url('images/who-i-am-shilouette.png');
+    background-image: url('images/who-i-am-shilouette.webp');
     background-position: center;
     background-size: cover;
 }

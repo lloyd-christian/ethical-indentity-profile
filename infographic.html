@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE8 - Ethical Identity Profile (Infographic)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_downward,close,menu"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style-3.css">
+    <style>
+        .viewer-body {
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header,
+        main,
+        footer {
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: var(--yellow);
+            color: var(--black);
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Sora';
+            border: 5px solid var(--black);
+            box-shadow: 4px 4px 0px var(--black);
+            transition: transform 0.1s ease;
+        }
+
+        .back-btn:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px var(--black);
+        }
+
+        main {
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .infographic-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .infographic-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 5px solid var(--black);
+            box-shadow: 8px 8px 0px var(--black);
+        }
+    </style>
+</head>
+
+<body class="viewer-body">
+    <header>
+        <nav class="navbar">
+            <div class="logo">Lloyd Christian</div>
+            <a href="index.html#who-am-i" class="back-btn"><span class="material-symbols-outlined">arrow_back</span>Go
+                Back</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="infographic-container">
+            <img src="images/infographic-version.webp" alt="Detailed Infographic Display">
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Made with heart by Lloyd Christian Damalerio (BSIT-2).<br>In partial requirement for GE8 Ethics.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
