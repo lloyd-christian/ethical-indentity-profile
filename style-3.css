@@ -126,7 +126,7 @@ a {
     top: 70px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -136,6 +136,7 @@ a {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 99;
 }
 
 .menu-links a {
@@ -145,6 +146,10 @@ a {
     color: var(--background);
     font-weight: var(--text-weight);
     transition: color 0.2s;
+    text-align: center;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .menu-links a:hover {
@@ -262,6 +267,7 @@ a {
 
 #who-am-i .content-container {
     perspective: 1000px;
+    background-color: var(--background);
 }
 
 .card-front, .card-back {
@@ -399,6 +405,7 @@ a {
         linear-gradient(to right, rgba(18, 18, 18, 0.18) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(18, 18, 18, 0.18) 1px, transparent 1px);
     background-size: 40px 40px;
+    background-position: calc(50% - 0.5px) top; 
 }
 
 .quote-card {
@@ -574,6 +581,9 @@ a {
 }
 
 .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--text-font), sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
@@ -639,6 +649,19 @@ a {
     flex-direction: column;
     justify-content: center;
     border-bottom: 5px solid var(--black);
+}
+
+.modular-content-col.line-right {
+    border-right: 5px solid var(--black);
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .modular-content-col.line-right {
+        border-right: none;
+        border-bottom: 5px solid var(--black);
+        padding-bottom: 30px; 
+    }
 }
 
 .modular-split-title {
@@ -772,7 +795,7 @@ a {
 
 .full-viewport-section {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -861,11 +884,8 @@ footer p {
 }
 
 .showcase-scroll-track::-webkit-scrollbar-track {
-    background: var(--background);
-    border-style: solid;
-    border-width: 5px 5px 5px 6px;
-    border-color: var(--black);
-    
+    border: 5px solid var(--black);
+    box-sizing: border-box;
 }
 
 .showcase-scroll-track::-webkit-scrollbar-thumb {
@@ -1095,7 +1115,8 @@ body.nav-hidden .magic-sticky-viewport {
 }
 
 .credits-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     width: 100%;
     border-top: 5px solid var(--black);
@@ -1108,38 +1129,71 @@ body.nav-hidden .magic-sticky-viewport {
     background-color: var(--orange);
     color: var(--black);
     padding: 15px 25px;
-    font-family: var(--text-font);
-    font-weight: bold;
+    font-family: var(--text-font), sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
     border-right: 5px solid var(--black);
     white-space: nowrap;
     z-index: 2;
-}
-
-.marquee-viewport {
-    flex-grow: 1;
-    overflow: hidden;
+    height: 100%;
     display: flex;
     align-items: center;
 }
 
-.marquee-track {
+.marquee-viewport {
     display: flex;
-    width: max-content;
-    animation: text-loop 25s linear infinite;
+    align-items: center;
+    padding: 15px 20px;
+    overflow: hidden;
+    min-height: 60px;
 }
 
-.marquee-text {
-    font-size: 1.3rem;
+.credit-fade-text {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     font-weight: 600;
     color: var(--black);
-    white-space: nowrap;
+    line-height: 1.3;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes text-loop {
-    0% {
-        transform: translateX(0);
+.credit-fade-text.fade-hidden {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+@media (max-width: 600px) {
+    .credits-container {
+        grid-template-columns: 1fr;
     }
-    100% {
-        transform: translateX(-50%);
+    
+    .stationary-label {
+        border-right: none;
+        border-bottom: 5px solid var(--black);
+        justify-content: center;
+        padding: 10px 20px;
     }
+
+    .marquee-viewport {
+        justify-content: center;
+        text-align: center;
+        padding: 15px 12px;
+        min-height: 70px;
+    }
+}
+
+.neobrutalist-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.neobrutalist-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
 }

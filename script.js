@@ -99,3 +99,28 @@ window.addEventListener('scroll', () => {
     handleThreeLayerPeel('experience', 'exp-magic-line', 'exp-layer-sol', 'exp-layer-les');
     handleThreeLayerPeel('ethical-dilemma', 'dilemma-magic-line', 'dilemma-layer-sol', 'dilemma-layer-les');
 });
+
+
+// For credits
+const creditsList = [
+    "GraphicSymbols (Neobrutalism Symbols)",
+    "Google (Material Symbols and Fonts)",
+];
+
+let currentCreditIndex = 0;
+const creditElement = document.getElementById("credit-display-box");
+
+function rotateCredits() {
+    if (!creditElement) return;
+
+    creditElement.classList.add("fade-hidden");
+
+    setTimeout(() => {
+        currentCreditIndex = (currentCreditIndex + 1) % creditsList.length;
+        creditElement.textContent = creditsList[currentCreditIndex];
+        
+        creditElement.classList.remove("fade-hidden");
+    }, 400);
+}
+
+setInterval(rotateCredits, 4000);
