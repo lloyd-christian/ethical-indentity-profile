@@ -57,6 +57,13 @@ card.addEventListener('click', (e) => {
     card.classList.toggle('is-flipped');
 });
 
+card.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        card.classList.toggle('is-flipped');
+    }
+});
+
 // For Experience and Ethical Dillema
 function handleThreeLayerPeel(sectionId, lineId, solutionLayerId, lessonLayerId) {
     const section = document.getElementById(sectionId);
