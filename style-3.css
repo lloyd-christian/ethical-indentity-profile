@@ -309,7 +309,6 @@ h2 {
 
 #who-am-i .content-container {
     perspective: 1000px;
-    background-color: var(--background);
 }
 
 .card-front, 
