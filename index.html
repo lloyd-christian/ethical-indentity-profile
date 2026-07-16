@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Unbounded:wght@200..900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style-3.css">
 </head>
@@ -32,10 +32,10 @@
         <nav class="navbar" aria-label="Primary navigation">
             <div class="logo">Lloyd Christian</div>
 
-            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
-                aria-controls="mobile-menu" onclick="toggleMenu()">
-                <span class="material-symbols-outlined menu-icon">menu</span>
-                <span class="material-symbols-outlined close-icon">close</span>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"
+                onclick="toggleMenu()">
+                <img src="images/design-asset-menu.svg" class="menu-icon" alt="Menu" width="32" height="32">
+                <img src="images/design-asset-close.svg" class="close-icon" alt="Close" width="32" height="32">
             </button>
 
             <div class="menu-links" id="menuLinks">
@@ -63,9 +63,7 @@
 
                 <div class="arrow-container">
                     <div class="arrow">
-                        <span class="material-symbols-outlined">
-                            arrow_downward
-                        </span>
+                        <img src="images/design-asset-arrow-downward.svg" class="arrow-down-img" alt="Scroll Down" width="32" height="32">
                     </div>
                 </div>
             </div>
@@ -80,7 +78,8 @@
                             <h2>WHO AM I?</h2>
                         </div>
                         <div class="card-body front-bg">
-
+                            <img src="images/who-i-am-shilouette.webp" alt="Silhouette of Lloyd Christian"
+                                class="front-silhouette-img" fetchpriority="high">
                         </div>
                         <div class="card-footer">
                             <p>Click/Tap the card to open...</p>
@@ -379,8 +378,11 @@
 
             <div class="footer-actions">
                 <a href="infographic.html" class="action-btn btn-yellow">See Infographic Version</a>
-                <a href="#section-title" class="action-btn btn-white">Scroll to top<span
-                        class="material-symbols-outlined">arrow_upward</span></a>
+                <a href="#section-title" class="action-btn btn-white">
+                    Scroll to top
+                    <img src="images/design-asset-arrow-upward.svg" alt="" width="20" height="20"
+                        style="display: inline-block; vertical-align: middle;">
+                </a>
             </div>
 
             <div class="credits-container">

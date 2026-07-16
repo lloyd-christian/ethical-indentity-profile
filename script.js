@@ -102,9 +102,17 @@ function handleThreeLayerPeel(sectionId, lineId, solutionLayerId, lessonLayerId)
     }
 }
 
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    handleThreeLayerPeel('experience', 'exp-magic-line', 'exp-layer-sol', 'exp-layer-les');
-    handleThreeLayerPeel('ethical-dilemma', 'dilemma-magic-line', 'dilemma-layer-sol', 'dilemma-layer-les');
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            handleThreeLayerPeel('experience', 'exp-magic-line', 'exp-layer-sol', 'exp-layer-les');
+            handleThreeLayerPeel('ethical-dilemma', 'dilemma-magic-line', 'dilemma-layer-sol', 'dilemma-layer-les');
+            ticking = false;
+        });
+        ticking = true;
+    }
 });
 
 

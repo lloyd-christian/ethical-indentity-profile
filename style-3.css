@@ -159,9 +159,10 @@ h2 {
     z-index: 101;
 }
 
-.menu-toggle .material-symbols-outlined {
+.menu-toggle img {
     position: absolute;
-    font-size: 32px;
+    width: 32px;
+    height: 32px;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
@@ -224,7 +225,8 @@ h2 {
 
 /* === SECTION 0: TITLE === */
 #section-title {
-    min-height: calc(100vh - 75px); 
+    min-height: calc(100vh - 75px);
+    padding-top: 70px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -254,9 +256,10 @@ h2 {
     display: inline-block;
 }
 
-.arrow span {
+.arrow img {
     display: block;
-    font-size: 2rem; 
+    width: 32px;
+    height: 32px;
     animation: animate 2s infinite;
 }
 
@@ -376,9 +379,17 @@ h2 {
 }
 
 .front-bg {
-    background-image: url('images/who-i-am-shilouette.webp');
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.front-silhouette-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .card-back {
