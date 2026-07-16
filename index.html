@@ -21,6 +21,10 @@
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/sora/v17/xMQbuFFYT....woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/unbounded/v12/Yq6W-LOTX....woff2" as="font" type="font/woff2"
+        crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style-3.css">
@@ -31,8 +35,8 @@
         <nav class="navbar" aria-label="Primary navigation">
             <div class="logo">Lloyd Christian</div>
 
-            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"
-                onclick="toggleMenu()">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="mobile-menu" onclick="toggleMenu()">
                 <img src="images/design-asset-menu.svg" class="menu-icon" alt="Menu" width="32" height="32">
                 <img src="images/design-asset-close.svg" class="close-icon" alt="Close" width="32" height="32">
             </button>
@@ -62,7 +66,8 @@
 
                 <div class="arrow-container">
                     <div class="arrow">
-                        <img src="images/design-asset-arrow-downward.svg" class="arrow-down-img" alt="Scroll Down" width="32" height="32">
+                        <img src="images/design-asset-arrow-downward.svg" class="arrow-down-img" alt="Scroll Down"
+                            width="32" height="32">
                     </div>
                 </div>
             </div>
@@ -100,8 +105,10 @@
                                         DISCIPLINED.</strong></p>
                             </div>
                             <div class="image-side">
-                                <img src="images/who-i-am-back.webp" loading="lazy"
-                                    alt="This is me, Lloyd Christian, peeking at the side.">
+                                <img src="images/who-i-am-back-desktop.webp" srcset="images/who-i-am-back-mobile.webp 150w, 
+                                            images/who-i-am-back-desktop.webp 300w" sizes="(max-width: 768px) 132px, 
+                                            300px" alt="This is me, Lloyd Christian, peeking at the side."
+                                    loading="lazy" width="300" height="300">
                             </div>
                         </div>
                         <div class="card-footer">
