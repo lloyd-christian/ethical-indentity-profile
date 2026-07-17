@@ -55,11 +55,7 @@
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            background-color: var(--yellow);
-            color: var(--black);
-            font-weight: bold;
             text-decoration: none;
-            font-family: 'Sora';
             border: 5px solid var(--black);
             box-shadow: 4px 4px 0px var(--black);
             transition: transform 0.1s ease;
@@ -67,6 +63,7 @@
 
         .back-btn:active {
             transform: translate(4px, 4px);
+            background-color: var(--orange);
             box-shadow: 0px 0px 0px var(--black);
         }
 
@@ -95,13 +92,10 @@
 
 <body class="viewer-body">
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary navigation">
             <div class="logo">Lloyd Christian</div>
-            <!-- <a href="index.html#who-am-i" class="back-btn"><span class="material-symbols-outlined">arrow_back</span>Go
-                Back</a> -->
             <a href="index.html#who-am-i" class="back-btn">
-                <img src="images/design-asset-arrow-back.svg" alt="" width="20" height="20"
-                    style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                <img src="images/design-asset-arrow-back.svg" alt="" width="20" height="20">
                 Go Back
             </a>
         </nav>
@@ -109,7 +103,7 @@
 
     <main>
         <div class="infographic-container">
-            <img src="images/infographic-version.webp" alt="Detailed Infographic Display">
+            <img src="images/ge8-ethical-identity-profile-infographic.webp" alt="Detailed Infographic Display">
         </div>
     </main>
 
