@@ -1,30 +1,59 @@
+.btn-white,
+.btn-yellow {
+    box-shadow: var(--box-shadow)
+}
+
+.menu-links a,
+a {
+    text-decoration: none
+}
+
+.footer-symbol,
+.image-side img {
+    object-fit: contain;
+    display: block
+}
+
+.layer-lesson,
+.layer-solution {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%)
+}
+
+.quote-author,
+.showcase-content h3,
+.stationary-label,
+.subnav-section-title {
+    text-transform: uppercase
+}
+
+#section-title,
+.main-footer,
+.menu-links a,
+.quote-card,
+.text-center {
+    text-align: center
+}
+
 :root {
-    /* LIGHT MODE */
     --background: #f5f5f5;
     --yellow: #FFC300;
     --black: #121212;
     --orange: #FF8800;
-
-    /* HEADING 1 */
     --heading-font: "Unbounded";
     --heading1-size: clamp(3rem, 5.5vw, 6rem);
     --heading2-size: clamp(2rem, 3.5vw + 1rem, 4rem);
-
-    /* NORMAL TEXT */
     --text-font: "Sora";
     --text-weight: 500;
     --text-size: clamp(1.125rem, 0.5vw + 1rem, 1.625rem);
-
     --inline-padding: clamp(1rem, 4vw, 5rem);
     --max-content-width: 1200px;
-    --box-shadow: 4px 4px 0 0 var(--black);
+    --box-shadow: 4px 4px 0 0 var(--black)
 }
 
-/* === DEFAULT STYLES === */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
@@ -33,74 +62,82 @@ body {
     font-optical-sizing: auto;
     font-weight: var(--text-weight);
     font-style: normal;
-    font-size: var(--text-size);
+    font-size: var(--text-size)
+}
+
+.magic-text-wrapper h3,
+.modular-split-title,
+.showcase-content h3,
+.title-header,
+h2 {
+    font-family: var(--heading-font), sans-serif
+}
+
+.action-btn,
+h2 {
+    font-weight: 700
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit
 }
 
 h2 {
-    font-family: var(--heading-font), sans-serif;
-    font-weight: 700;
     font-size: var(--heading2-size);
-    margin: 10px 0px;
+    margin: 10px 0
 }
 
-/* === REUSABLE COMPONENTS === */
 .action-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-weight: 700;
     font-size: 1.1rem;
     padding: 14px 28px;
     border: 4px solid var(--black);
     cursor: pointer;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transition: transform .1s, box-shadow .1s
 }
 
 .btn-yellow {
-    background-color: var(--yellow);
-    box-shadow: var(--box-shadow);
+    background-color: var(--yellow)
 }
 
 .btn-white {
-    background-color: var(--background);
-    box-shadow: var(--box-shadow);
+    background-color: var(--background)
 }
 
 .action-btn:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px 0px var(--black);
+    box-shadow: 6px 6px 0 0 var(--black)
 }
 
 .action-btn:active {
     transform: translate(2px, 2px);
     background-color: var(--orange);
-    box-shadow: 2px 2px 0px 0px var(--black);
+    box-shadow: 2px 2px 0 0 var(--black)
 }
 
-/* === GLOBAL LAYOUTS === */
+.navbar.hidden,
+.subnav-container {
+    transform: translateY(-100%)
+}
+
 .section-wrapper {
     width: 100%;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #000
 }
 
 .content-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 24px;
+    padding: 0 24px
 }
 
 .gridline-background {
-    background-image: 
-        linear-gradient(to right, rgba(18, 18, 18, 0.18) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(18, 18, 18, 0.18) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(18, 18, 18, .18) 1px, transparent 1px), linear-gradient(to bottom, rgba(18, 18, 18, .18) 1px, transparent 1px);
     background-size: 40px 40px;
-    background-position: calc(50% - 0.5px) top; 
+    background-position: calc(50% - .5px) top
 }
 
 .full-viewport-section {
@@ -109,18 +146,17 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 #conclusion .mondrian-border-wrapper {
-    width: 100%;
+    width: 100%
 }
 
 #conclusion .footer-actions {
-    padding: 30px 24px; 
+    padding: 30px 24px
 }
 
-/* === PRIMARY NAVBAR === */
 .navbar {
     position: absolute;
     top: 0;
@@ -133,20 +169,16 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    z-index: 100;
-}
-
-.navbar.hidden {
-    transform: translateY(-100%);
+    z-index: 100
 }
 
 .logo {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .menu-toggle {
-    background: none;
+    background: 0 0;
     border: none;
     cursor: pointer;
     position: relative;
@@ -155,40 +187,41 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 101;
+    z-index: 101
+}
+
+.menu-links,
+.subnav-container {
+    position: fixed;
+    left: 0;
+    pointer-events: none
 }
 
 .menu-toggle img {
     position: absolute;
     width: 32px;
     height: 32px;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    transition: transform .4s cubic-bezier(.4, 0, .2, 1), opacity .3s
 }
 
-.menu-toggle .menu-icon {
+.menu-toggle .menu-icon,
+.menu-toggle.active .close-icon {
     opacity: 1;
-    transform: rotate(0deg);
+    transform: rotate(0)
 }
 
 .menu-toggle .close-icon {
     opacity: 0;
-    transform: rotate(-180deg);
+    transform: rotate(-180deg)
 }
 
 .menu-toggle.active .menu-icon {
     opacity: 0;
-    transform: rotate(180deg);
-}
-
-.menu-toggle.active .close-icon {
-    opacity: 1;
-    transform: rotate(0deg);
+    transform: rotate(180deg)
 }
 
 .menu-links {
-    position: fixed;
     top: 70px;
-    left: 0;
     width: 100%;
     height: calc(100dvh - 70px);
     background-color: var(--black);
@@ -198,55 +231,46 @@ h2 {
     align-items: center;
     gap: 24px;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 99;
+    transition: opacity .3s;
+    z-index: 99
 }
 
 .menu-links a {
     font-size: 28px;
-    text-decoration: none;
     color: var(--background);
-    transition: color 0.2s;
-    text-align: center;
+    transition: color .2s;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 24px
 }
 
 .menu-links a:hover {
-    color: var(--yellow);
+    color: var(--yellow)
 }
 
 .menu-links a:active {
-    color: var(--orange);
+    color: var(--orange)
 }
 
 .menu-links.active {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: auto
 }
 
-/* === NEW CONTEXTUAL SUB-NAVBAR === */
 .subnav-container {
-    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--background);
     border-bottom: 5px solid var(--black);
     z-index: 150;
     padding: 12px 24px;
     opacity: 0;
-    pointer-events: none;
-    transform: translateY(-100%);
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity .3s cubic-bezier(.16, 1, .3, 1), transform .3s cubic-bezier(.16, 1, .3, 1)
 }
 
 .subnav-container.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
 .subnav-wrap {
@@ -255,21 +279,20 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 16px
 }
 
 .subnav-section-title {
     font-size: 1rem;
     font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--black);
+    letter-spacing: .5px;
+    color: var(--black)
 }
 
 .subnav-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12px
 }
 
 .subnav-progress-track {
@@ -277,35 +300,56 @@ h2 {
     height: 8px;
     background-color: var(--background);
     border: 2px solid var(--black);
-    flex-shrink: 0;
+    flex-shrink: 0
+}
+
+.card,
+.card-container,
+.showcase-card {
+    border: 5px solid var(--black);
+    box-shadow: var(--box-shadow)
+}
+
+.card-footer,
+.credits-container {
+    border-top: 5px solid var(--black)
+}
+
+.card-header,
+.line-bottom,
+.magic-container,
+.modular-content-col,
+.mondrian-border-wrapper {
+    border-bottom: 5px solid var(--black)
 }
 
 .subnav-progress-fill {
     height: 100%;
     background-color: var(--orange);
     width: 0%;
-    transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+    transition: width .2s cubic-bezier(.16, 1, .3, 1), background-color .2s
 }
 
-/* === SECTION 0: TITLE === */
+#section-title,
+.card-container {
+    background-color: var(--yellow);
+    display: flex
+}
+
 #section-title {
     min-height: calc(100vh - 75px);
     padding-top: 70px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: var(--yellow);
+    align-items: center
 }
 
 .title-header {
-    font-family: var(--heading-font), sans-serif;
     font-weight: 700;
     font-size: var(--heading1-size);
-    padding: 2rem;
+    padding: 2rem
 }
 
 .title-subheader {
-    padding: 0.5rem;
+    padding: .5rem
 }
 
 .arrow-container {
@@ -313,66 +357,61 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 3rem
 }
 
 .arrow img {
     display: block;
     width: 32px;
     height: 32px;
-    animation: animate 2s infinite;
+    animation: 2s infinite animate
 }
 
 @keyframes animate {
     0% {
         opacity: 0;
-        transform: translateY(-15px);
+        transform: translateY(-15px)
     }
+
     50% {
-        opacity: 1;
+        opacity: 1
     }
+
     100% {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(15px)
     }
 }
 
-/* === SECTION 1: WHO I AM? CARD === */
 .card-container {
-    background-color: var(--yellow);
-    border: 5px solid var(--black);
-    box-shadow: var(--box-shadow);
-    padding: 30px 24px; 
-    display: flex;
+    padding: 30px 24px;
     flex-direction: column;
     justify-content: space-between;
     min-height: auto;
-    height: auto;
+    height: auto
 }
 
 .card {
-    height: 80vh; 
+    height: 80vh;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform .6s cubic-bezier(.4, 0, .2, 1);
     transform-style: preserve-3d;
     cursor: pointer;
-    position: relative; 
-    box-shadow: var(--box-shadow);
-    border: 5px solid var(--black);
+    position: relative
 }
 
 .card.is-flipped {
-    transform: rotateY(-180deg);
+    transform: rotateY(-180deg)
 }
 
 #who-am-i .content-container {
-    perspective: 1000px;
+    perspective: 1000px
 }
 
-.card-front, 
-.card-back {
+.card-back,
+.card-front {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -383,36 +422,34 @@ h2 {
     display: grid;
     grid-template-rows: 80px 1fr 80px;
     transform-style: preserve-3d;
-    z-index: 2;
+    z-index: 2
 }
 
 .card-header {
-    border-bottom: 5px solid var(--black);
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 24px
 }
 
 .card-header h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-    margin: 0;
+    margin: 0
 }
 
 .card-body {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .card-footer {
-    border-top: 5px solid var(--black);
     display: grid;
     grid-template-columns: 1fr 80px;
-    align-items: center;
+    align-items: center
 }
 
 .card-footer p {
     padding-left: 24px;
-    margin: 0;
+    margin: 0
 }
 
 .status-box {
@@ -421,26 +458,29 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    padding: 16px
 }
 
 .footer-symbol {
     width: 100%;
     height: 100%;
     max-width: 40px;
-    max-height: 40px;
-    object-fit: contain;
-    display: block;
+    max-height: 40px
 }
 
 .card-front {
-    background: var(--yellow);
+    background: var(--yellow)
+}
+
+#moral-compass,
+.card-back {
+    background-color: var(--background)
 }
 
 .front-bg {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .front-silhouette-img {
@@ -448,12 +488,11 @@ h2 {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
+    display: block
 }
 
 .card-back {
-    background-color: var(--background);
-    transform: rotateY(180deg);
+    transform: rotateY(180deg)
 }
 
 .back-content {
@@ -461,7 +500,7 @@ h2 {
     grid-template-columns: 1.2fr 0.8fr;
     padding: 24px 0 0 24px;
     height: 100%;
-    position: relative;
+    position: relative
 }
 
 .text-side {
@@ -470,7 +509,7 @@ h2 {
     gap: 16px;
     justify-content: center;
     padding-bottom: 24px;
-    z-index: 5;
+    z-index: 5
 }
 
 .image-side {
@@ -479,69 +518,78 @@ h2 {
     width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .image-side img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
-    display: block;
-    transform-origin: bottom right;
+    transform-origin: bottom right
 }
 
-/* === SECTION 2: MY MORAL COMPASS === */
 #moral-compass {
-    background-color: var(--background);
-    padding: 60px 0;
+    padding: 60px 0
 }
 
 .showcase-scroll-track {
     display: flex;
     gap: 32px;
     overflow-x: auto;
-    padding: 10px 16px 24px 16px; 
-    margin-bottom: 0px;
+    padding: 10px 16px 24px;
+    margin-bottom: 0;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch
 }
 
 .showcase-scroll-track::-webkit-scrollbar {
     height: 24px;
-    display: block;
+    display: block
 }
 
 .showcase-scroll-track::-webkit-scrollbar-track {
-    border: 5px solid var(--black);
+    border: 5px solid var(--black)
 }
 
 .showcase-scroll-track::-webkit-scrollbar-thumb {
     background: var(--yellow);
-    border: 3px solid var(--black);
+    border: 3px solid var(--black)
+}
+
+.line-right,
+.modular-content-col.line-right,
+.stationary-label {
+    border-right: 5px solid var(--black)
 }
 
 .showcase-scroll-track::-webkit-scrollbar-thumb:hover {
-    background: var(--orange);
+    background: var(--orange)
 }
 
 .showcase-card {
     flex: 0 0 300px;
     scroll-snap-align: start;
-    border: 5px solid var(--black);
-    box-shadow: var(--box-shadow);
     padding: 30px 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 20px
 }
 
+#dilemma-layer-1,
+#exp-layer-1,
+.fill-yellow,
 .showcase-card:nth-child(odd) {
-    background-color: var(--yellow);
+    background-color: var(--yellow)
 }
 
-.showcase-card:nth-child(even) {
-    background-color: var(--orange);
+.fill-orange,
+.showcase-card:nth-child(2n) {
+    background-color: var(--orange)
+}
+
+.magic-container,
+.magic-layer {
+    background-color: var(--background)
 }
 
 .showcase-symbol-wrapper {
@@ -549,39 +597,34 @@ h2 {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .showcase-symbol-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain
 }
 
 .showcase-content h3 {
-    font-family: var(--heading-font), sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 .showcase-content p {
     margin: 0;
     font-size: 1.1rem;
-    line-height: 1.4;
+    line-height: 1.4
 }
 
-/* === SECTIONS 3 & 4: SCROLL PEEL LAYERS === */
 .magic-container {
-    width: 100%;
-    background-color: var(--background);
-    border-bottom: 5px solid var(--black);
+    width: 100%
 }
 
 .magic-scroll-runway {
     height: 350vh;
-    position: relative;
+    position: relative
 }
 
 .magic-sticky-viewport {
@@ -594,7 +637,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 60px
 }
 
 .magic-layer {
@@ -607,16 +650,25 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 24px;
-    background-color: var(--background); 
+    padding: 40px 24px
 }
 
-.layer-problem { z-index: 1; }
-.layer-solution { z-index: 2; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
-.layer-lesson { z-index: 3; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+.magic-sweep-line,
+.magic-sweep-line .guide-text {
+    background-color: var(--black);
+    position: absolute
+}
 
-#exp-layer-1, #dilemma-layer-1 {
-    background-color: var(--yellow);
+.layer-problem {
+    z-index: 1
+}
+
+.layer-solution {
+    z-index: 2
+}
+
+.layer-lesson {
+    z-index: 3
 }
 
 .magic-card-content {
@@ -626,120 +678,121 @@ h2 {
     text-align: center;
     gap: 20px;
     width: 100%;
-    max-width: 650px;
+    max-width: 650px
 }
 
 .magic-img {
     width: 120px;
-    height: 120px;
+    height: 120px
 }
 
 .magic-text-wrapper h3 {
-    font-family: var(--heading-font), sans-serif;
     font-size: 1.8rem;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 .magic-text-wrapper p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .magic-sweep-line {
-    position: absolute;
     left: 0;
     top: 100%;
     width: 100%;
-    height: 8px; 
-    background-color: var(--black);
+    height: 8px;
     z-index: 50;
     transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none
+}
+
+.footer-grid-section,
+.modular-content-col,
+.modular-split-section,
+.mondrian-border-wrapper,
+.quote-card {
+    background-color: var(--background)
 }
 
 .magic-sweep-line .guide-text {
-    font-size: 0.75rem;
+    font-size: .75rem;
     font-weight: 800;
-    background-color: var(--black);
     color: var(--background);
     padding: 6px 12px;
-    position: absolute;
     right: 40px;
     top: 14px;
     letter-spacing: 1px;
-    white-space: nowrap;
+    white-space: nowrap
 }
 
-/* === SECTIONS 5 & 6: MODULAR SPLITS === */
+.mondrian-container .text-block,
+.mondrian-container .text-block-wide {
+    background-color: var(--background) !important;
+    color: var(--black) !important;
+    text-align: left
+}
+
 .modular-split-section {
     width: 100%;
-    background-color: var(--background);
-    padding: 0;
+    padding: 0
 }
 
 .modular-split-grid {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100%
 }
 
 .modular-content-col {
-    background-color: var(--background);
     padding: 45px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-bottom: 5px solid var(--black);
+    justify-content: center
 }
 
 .modular-content-col.line-right {
-    border-right: 5px solid var(--black);
-    border-bottom: none;
+    border-bottom: none
 }
 
 .modular-split-title {
-    font-family: var(--heading-font), sans-serif;
     font-weight: 800;
     font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.05;
     letter-spacing: -1px;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px
 }
 
 .modular-split-p {
     margin: 0;
     font-weight: 500;
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .modular-visual-col {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 50px 20px
 }
 
 .neobrutalist-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1
 }
 
 .neobrutalist-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    display: block
 }
 
-/* === SECTION 7: QUOTE === */
 .quote-card {
     padding: 40px 30px;
-    text-align: center;
-    background-color: var(--background);
-    width: 100%;
+    width: 100%
 }
 
 .quote-text {
@@ -748,76 +801,62 @@ h2 {
     line-height: 1.15;
     margin-top: 0;
     margin-bottom: 25px;
-    letter-spacing: -1px; 
+    letter-spacing: -1px
 }
 
 .quote-author {
     font-weight: 700;
     font-size: clamp(1.1rem, 2vw, 1.5rem);
-    text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 0;
+    margin: 0
 }
 
-/* === MONDRIAN THEMED FOOTER & CREDITS === */
 .footer-grid-section {
-    background-color: var(--background);
     padding: 0;
-    width: 100%;
+    width: 100%
 }
 
 .mondrian-border-wrapper {
-    width: 100%;
-    border-bottom: 5px solid var(--black);
-    background-color: var(--background);
+    width: 100%
 }
 
 .mondrian-container {
     display: grid;
     width: 100%;
     grid-template-columns: 1.2fr 0.5fr 1.6fr 0.8fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, auto)
 }
 
 .mondrian-block {
     min-height: 140px;
     display: flex;
     align-items: center;
-    font-weight: 800;
+    font-weight: 800
 }
 
 .text-center {
-    justify-content: center;
-    text-align: center;
+    justify-content: center
 }
 
 .mondrian-container .text-block,
 .mondrian-container .text-block-wide {
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     padding: 25px 30px;
-    line-height: 1;
+    line-height: 1
 }
 
-.fill-orange  { background-color: var(--orange); }
-.fill-yellow  { background-color: var(--yellow); }
-.fill-dark    { background-color: var(--black); }
-.fill-light   { background-color: var(--background); }
-
-.mondrian-container .text-block {
-    background-color: var(--background) !important;
-    color: var(--black) !important;
-    text-align: left;
+.fill-dark {
+    background-color: var(--black)
 }
-    
+
+.credits-container,
+.fill-light {
+    background-color: var(--background)
+}
+
 .mondrian-container .text-block-wide {
-    background-color: var(--background) !important;
-    color: var(--black) !important;
-    grid-column: span 2;
-    text-align: left;
+    grid-column: span 2
 }
-
-.line-right  { border-right: 5px solid var(--black); }
-.line-bottom { border-bottom: 5px solid var(--black); }
 
 .footer-actions {
     display: flex;
@@ -825,7 +864,7 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 60px 24px;
+    padding: 60px 24px
 }
 
 .credits-container {
@@ -833,22 +872,18 @@ h2 {
     grid-template-columns: auto 1fr;
     align-items: center;
     width: 100%;
-    border-top: 5px solid var(--black);
-    background-color: var(--background);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .stationary-label {
     background-color: var(--orange);
     padding: 15px 25px;
     font-weight: 800;
-    text-transform: uppercase;
-    border-right: 5px solid var(--black);
     white-space: nowrap;
     z-index: 2;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .marquee-viewport {
@@ -856,77 +891,77 @@ h2 {
     align-items: center;
     padding: 15px 20px;
     overflow: hidden;
-    min-height: 60px;
+    min-height: 60px
 }
 
 .credit-fade-text {
     font-size: clamp(1rem, 1.8vw, 1.3rem);
     font-weight: 600;
     line-height: 1.3;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
 .credit-fade-text.fade-hidden {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(4px)
 }
 
-/* === FOOTER === */
 .main-footer {
     background-color: var(--black);
     color: var(--background);
-    text-align: center;
     padding: 25px 24px;
-    width: 100%;
+    width: 100%
 }
 
 .main-footer p {
     margin: 0;
     color: var(--background);
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-weight: 400;
+    font-size: clamp(.9rem, 2vw, 1.1rem);
+    font-weight: 400
 }
 
-/* === GLOBAL WEBKIT SCROLLBAR === */
 html::-webkit-scrollbar {
-    width: 20px;
+    width: 20px
 }
 
 html::-webkit-scrollbar-track {
     background-color: var(--background);
-    border-left: 5px solid var(--black);
+    border-left: 5px solid var(--black)
 }
 
 html::-webkit-scrollbar-thumb {
     background-color: var(--yellow);
     border-top: 5px solid var(--black);
     border-bottom: 5px solid var(--black);
-    border-left: 5px solid var(--black);
+    border-left: 5px solid var(--black)
 }
 
 html::-webkit-scrollbar-thumb:hover {
-    background-color: var(--orange);
+    background-color: var(--orange)
 }
 
-/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width:768px) {
 
-@media (max-width: 768px) {
-    .modular-content-col.line-right {
+    .modular-content-col.line-right,
+    .stationary-label {
         border-right: none;
-        border-bottom: 5px solid var(--black);
-        padding-bottom: 30px; 
+        border-bottom: 5px solid var(--black)
+    }
+
+    .modular-content-col.line-right {
+        padding-bottom: 30px
     }
 
     .mondrian-container .hide-mobile {
-        display: none;
+        display: none
     }
 
     .mondrian-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100%
     }
 
     .mondrian-block.text-block,
@@ -941,59 +976,57 @@ html::-webkit-scrollbar-thumb:hover {
         font-size: clamp(2rem, 6vw, 3rem);
         line-height: 1.1;
         border-right: none;
-        border-bottom: 5px solid var(--black);
+        border-bottom: 5px solid var(--black)
     }
 
-    .mondrian-container div:nth-child(1) {
-        background-color: var(--orange) !important;
+    .mondrian-container div:first-child {
+        background-color: var(--orange) !important
     }
 
     .mondrian-container div:nth-child(7) {
         background-color: var(--black) !important;
-        color: var(--background) !important;
+        color: var(--background) !important
     }
 
     .mondrian-container .text-block-wide {
         background-color: var(--yellow) !important;
-        border-bottom: none;
+        border-bottom: none
     }
 
     .credits-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
-    
+
     .stationary-label {
-        border-right: none;
-        border-bottom: 5px solid var(--black);
         justify-content: center;
-        padding: 10px 20px;
+        padding: 10px 20px
     }
 
     .marquee-viewport {
         justify-content: center;
         text-align: center;
         padding: 15px 12px;
-        min-height: 70px;
+        min-height: 70px
     }
-    
+
     .subnav-container {
-        padding: 8px 16px;
+        padding: 8px 16px
     }
 
     .subnav-section-title {
-        font-size: 0.8rem;
+        font-size: .8rem
     }
 
     .subnav-progress-track {
-        width: 150px;
+        width: 150px
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
     .modular-split-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 100%;
+        width: 100%
     }
 
     .modular-content-col {
@@ -1003,12 +1036,13 @@ html::-webkit-scrollbar-thumb:hover {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        min-width: 0;
+        min-width: 0
     }
 
-    .modular-content-col > * {
+    .modular-content-col>*,
+    .modular-visual-col>* {
         width: 100%;
-        max-width: 576px;
+        max-width: 576px
     }
 
     .modular-visual-col {
@@ -1016,19 +1050,14 @@ html::-webkit-scrollbar-thumb:hover {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        min-width: 0;
-    }
-
-    .modular-visual-col > * {
-        width: 100%;
-        max-width: 576px;
+        min-width: 0
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
     * {
         animation: none !important;
         transition: none !important;
-        scroll-behavior: auto;
+        scroll-behavior: auto
     }
 }

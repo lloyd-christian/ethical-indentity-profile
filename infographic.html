@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethical Identity Profile (Infographic) | Lloyd Christian Damalerio</title>
+    <link rel="preload" fetchpriority="high" as="image" href="images/infographic-medium.webp" type="image/webp">
     <meta name="robots" content="noindex"> <!-- DELETE LATER ONCE FINALIZED -->
     <meta name="description"
         content="Explore my ethical self reflecting in various section such as experiences, dilemma, moral compass and more. In partial requirement for the subject GE8 Ethics.">
@@ -16,38 +17,56 @@
     <meta property="twitter:description" content="Discover my ethical self, in partial requirement for GE8 ethics.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="images/preview-thumbnail.png">
-    <!-- <link rel="canonical" href="https://..."> FILL THIS ONE LATER ON-->
+    <link rel="canonical" href="https://lloyd-christian.github.io/ethical-indentity-profile/">
     <link rel="icon" type="image/x-icon" href="images/favicon-16x16.ico" sizes="16x16">
     <link rel="icon" type="image/x-icon" href="images/favicon-32x32.ico" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Unbounded:wght@200..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style-3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" media="print"
+        onload="this.media='all'">
     <style>
+        .infographic-container,
+        .navbar {
+            box-sizing: border-box;
+            width: 100%
+        }
+
         .viewer-body {
-            background-color: var(--background);
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            font-family: Sora, sans-serif;
+            color: #121212;
+            width: 100%;
+            overflow-x: hidden
         }
 
+        footer,
         header,
-        main,
-        footer {
-            width: 100%;
+        main {
+            width: 100%
         }
 
         .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70px;
+            background-color: #ffc300;
+            border-bottom: 5px solid #121212;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
-            box-sizing: border-box;
+            padding: 0 24px;
+            z-index: 100
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600
         }
 
         .back-btn {
@@ -56,36 +75,51 @@
             gap: 8px;
             padding: 8px 16px;
             text-decoration: none;
-            border: 5px solid var(--black);
-            box-shadow: 4px 4px 0px var(--black);
-            transition: transform 0.1s ease;
+            font-weight: 700;
+            background-color: #f5f5f5;
+            border: 5px solid #121212;
+            box-shadow: 4px 4px 0 #121212;
+            transition: transform .1s;
+            color: #121212
         }
 
         .back-btn:active {
             transform: translate(4px, 4px);
-            background-color: var(--orange);
-            box-shadow: 0px 0px 0px var(--black);
+            background-color: #f80;
+            box-shadow: 0 0 0 #121212
         }
 
         main {
             width: 100%;
-            margin-top: 80px;
+            margin-top: 80px
         }
 
         .infographic-container {
-            width: 100%;
             max-width: 900px;
-            margin: 0 auto 40px auto;
-            padding: 24px;
-            box-sizing: border-box;
+            margin: 0 auto 40px;
+            padding: 24px
         }
 
         .infographic-container img {
             width: 100%;
             height: auto;
             display: block;
-            border: 5px solid var(--black);
-            box-shadow: 8px 8px 0px var(--black);
+            border: 5px solid #121212;
+            box-shadow: 8px 8px 0 #121212
+        }
+
+        .main-footer {
+            background-color: #121212;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 25px 24px;
+            margin-top: auto
+        }
+
+        .main-footer p {
+            margin: 0;
+            font-size: clamp(.9rem, 2vw, 1.1rem);
+            font-weight: 400
         }
     </style>
 </head>
@@ -94,7 +128,7 @@
     <header>
         <nav class="navbar" aria-label="Primary navigation">
             <div class="logo">Lloyd Christian</div>
-            <a href="index.html#who-am-i" class="back-btn">
+            <a href="index.html" class="back-btn">
                 <img src="images/design-asset-arrow-back.svg" alt="" width="20" height="20">
                 Go Back
             </a>
@@ -103,7 +137,8 @@
 
     <main>
         <div class="infographic-container">
-            <img src="images/ge8-ethical-identity-profile-infographic.webp" alt="Detailed Infographic Display">
+            <img src="images/infographic-medium.webp" alt="Detailed Ethical Identity Profile Infographic" width="980"
+                height="1391" fetchpriority="high">
         </div>
     </main>
 
@@ -111,7 +146,6 @@
         <p>Made with heart by Lloyd Christian Damalerio (BSIT-2).<br>In partial requirement for GE8 Ethics.</p>
     </footer>
 
-    <script src="script.js" defer></script>
 </body>
 
 </html>
